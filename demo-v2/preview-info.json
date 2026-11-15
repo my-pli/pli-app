@@ -1,0 +1,8 @@
+{
+  "type": "product-story",
+  "actualAppFootage": false,
+  "generation": "Vertical 1080x1920 short (v10). Family scenes: made 9:16 on Hugging Face (PRO, ZeroGPU) by LTX-2 audio-to-video from first frames cleaned of what v9 had drawn wrong (Qwen-Image-Edit-2511 with the family's reference photos, scripts/make-scene-frames.py), speaking the Seedance voices the user accepted, sped up 1.05-1.12x; the captions the model burned in were removed (PP-OCRv3 text detection + DiffuEraser on Hugging Face), the clips upscaled 2x (Real-ESRGAN) and scanned for drawn defects (scripts/film_artifact_scan.py). Feature scenes: real recordings of the public Pli APK on the Pleos emulator (full display 2560x1440, night mode), answering those voices on a weekday 17:30 drive home in Gwanggyo; Pli speaks with its own voice (answers the car speaks again and again served from the edge voice cache: renditions by a commercial voice, MiniMax Speech 2.8 HD (Exuberant_Girl, happy, 1.15x) via Figma Weave, each checked by Whisper; new answers live from Supertonic 3 F3 at 1.4x. APK with the driving render budget: no title, entry or typing motion while the car drives, so the Pleos driving view keeps 28-30 redraws/s while Pli speaks).",
+  "durationSeconds": 40.967,
+  "videoSha256": "22715d0b9cb73e06f1050bf2275ea94b432e4497effecb38a9247f92eb524657",
+  "apkSha256": null
+}

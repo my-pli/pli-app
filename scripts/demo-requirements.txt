@@ -1,0 +1,5 @@
+aiohttp==3.13.3
+pulsectl==24.12.0
+Pillow==12.1.0
+grpcio==1.85.1
+protobuf==7.36.2
