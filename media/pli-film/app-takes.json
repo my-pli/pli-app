@@ -1,0 +1,177 @@
+{
+ "purpose": "Real feature takes of the public Pli APK for the product film. The cast lines are played into the public voice session; the app's own answers are recorded as they happen. Lines with `audio` are played from the generated scene where the child says them (LTX picture + voice); the app's own voice is recorded from its speaker. 2026-11-14: cast lines come from the Figma Weave scenes (Seedance 2.5); every take drives; clock fixed to a weekday 17:30.",
+ "takes": [
+  {
+   "id": "pack",
+   "settle": 3,
+   "turns": [
+    {
+     "id": "w-offer",
+     "wait": true,
+     "until": "(state.status.app.speech||'').startsWith('집까지')",
+     "timeout": 90
+    },
+    {
+     "id": "q-pack",
+     "speaker": "하연",
+     "text": "플리야, 내일 뭐 챙겨?",
+     "audio": ".tools/product-film/weave/ask-pack-seed-noface.mp4",
+     "from": 1.4,
+     "to": 4.04
+    }
+   ],
+   "vehicle": "drive"
+  },
+  {
+   "id": "album",
+   "settle": 3,
+   "turns": [
+    {
+     "id": "w-offer",
+     "wait": true,
+     "until": "(state.status.app.speech||'').startsWith('집까지')",
+     "timeout": 90
+    },
+    {
+     "id": "q-album-mom",
+     "speaker": "엄마",
+     "text": "하연이 사진으로 앨범 만들어 줄래?",
+     "audio": ".tools/product-film/weave/momalbum-seed.mp4",
+     "until": "state.status.app.panel==='ALBUM'",
+     "from": 2.75,
+     "to": 5.0
+    }
+   ],
+   "tail": 24,
+   "vehicle": "drive"
+  },
+  {
+   "id": "stop",
+   "settle": 3,
+   "turns": [
+    {
+     "id": "v-drive",
+     "vehicle": "drive",
+     "pause": 1.0
+    },
+    {
+     "id": "w-stop",
+     "wait": true,
+     "until": "(state.status.app.speech||'').startsWith('집까지')",
+     "timeout": 90
+    },
+    {
+     "id": "m-go",
+     "speaker": "엄마",
+     "text": "하연아, 거기 가 볼까?",
+     "audio": ".tools/product-film/weave/gothere-seed.mp4",
+     "from": 0.8,
+     "to": 2.6
+    }
+   ]
+  },
+  {
+   "id": "english",
+   "turns": [
+    {
+     "id": "q-english",
+     "speaker": "하연",
+     "text": "영어 퀴즈 시작해 줘!"
+    },
+    {
+     "id": "a-english",
+     "speaker": "하연",
+     "text": "",
+     "adaptive": "english"
+    }
+   ],
+   "settle": 6
+  },
+  {
+   "id": "whale",
+   "turns": [
+    {
+     "id": "q-whale",
+     "speaker": "하연",
+     "text": "고래는 물고기야?"
+    }
+   ],
+   "settle": 6
+  },
+  {
+   "id": "hush",
+   "turns": [
+    {
+     "id": "q-riddle",
+     "speaker": "하연",
+     "text": "수수께끼 내 줘!",
+     "cutIn": 1.6
+    },
+    {
+     "id": "m-hush",
+     "speaker": "엄마",
+     "text": "조용히 해 줘!",
+     "interrupt": true,
+     "until": "state.status.app.quiet===true && state.status.app.playback==='IDLE'"
+    }
+   ]
+  },
+  {
+   "id": "weather",
+   "turns": [
+    {
+     "id": "q-rain",
+     "speaker": "하연",
+     "text": "밖에 비 와?"
+    }
+   ]
+  },
+  {
+   "id": "battery",
+   "settle": 6,
+   "turns": [
+    {
+     "id": "q-battery",
+     "speaker": "하연",
+     "text": "배터리 얼마나 남았어?"
+    }
+   ]
+  },
+  {
+   "id": "notice",
+   "turns": [
+    {
+     "id": "q-notice",
+     "speaker": "엄마",
+     "text": "새 공지 있어?"
+    }
+   ]
+  },
+  {
+   "id": "math",
+   "turns": [
+    {
+     "id": "q-math",
+     "speaker": "하연",
+     "text": "숫자 놀이 해 줘!"
+    },
+    {
+     "id": "a-math",
+     "speaker": "하연",
+     "text": "",
+     "adaptive": "math"
+    }
+   ]
+  },
+  {
+   "id": "memory",
+   "turns": [
+    {
+     "id": "q-memory",
+     "speaker": "하연",
+     "text": "오늘 친구랑 도토리 찾은 거 기억해 줘!"
+    }
+   ]
+  }
+ ]
+}

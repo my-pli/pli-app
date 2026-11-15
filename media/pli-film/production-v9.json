@@ -1,0 +1,1134 @@
+{
+  "format": {
+    "durationSeconds": 40.232,
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "status": "edit-v9-vertical",
+  "creativeDirection": "A restrained, premium Korean product commercial about Pli, a voice companion for family drives on Pleos. The user's flow (restless child and strained mother in an older car -> the same family in a new Pleos car where Pli greets the child, they play, and the mother simply drives) is narrative intent only. Planning labels and joke annotations are never rendered as titles. Every shot is generated moving footage; no slideshow, frozen keyframe, Ken Burns move or storyboard panel.",
+  "continuity": "Same fictional Korean mother in her early thirties with a short dark bob, ivory knit cardigan and pale-blue shirt; same five-year-old daughter Hayeon with straight bangs, mustard hair clip and peach sweatshirt, always harnessed in a rear child seat. Left-hand-drive cars. The driver keeps her eyes on the road and both hands on the wheel. Pli is a soft yellow star on the forest-green Pleos display. Generated footage is an AI commercial, never evidence of app or vehicle behaviour.",
+  "startFrames": "Fictional AI keyframes in .tools/product-film/storyboard.png (prompt: .tools/product-film/generation-prompt.txt), cropped below. They only seed image-to-video generation.",
+  "negativePrompt": "static, frozen, still image, slideshow, zoom only, text, subtitles, captions, watermark, logo, morphing faces, distorted hands, extra fingers, extra people, deformed, blurry, low quality, jpeg artifacts, cartoon, 色调艳丽, 过曝, 静态, 字幕, 静止, 最差质量, 低质量, 畸形的, 毁容的, 手指融合",
+  "keyframes": {
+    "old-cabin": {
+      "source": ".tools/product-film/storyboard.png",
+      "crop": [
+        0,
+        0,
+        836,
+        469
+      ]
+    },
+    "old-mom": {
+      "source": ".tools/product-film/storyboard.png",
+      "crop": [
+        250,
+        25,
+        770,
+        318
+      ],
+      "size": [
+        1280,
+        720
+      ]
+    },
+    "new-car": {
+      "source": ".tools/product-film/storyboard.png",
+      "crop": [
+        836,
+        0,
+        1672,
+        469
+      ]
+    },
+    "hello-pli": {
+      "source": ".tools/product-film/storyboard.png",
+      "crop": [
+        0,
+        469,
+        836,
+        941
+      ]
+    },
+    "hayeon-close": {
+      "source": ".tools/product-film/storyboard.png",
+      "crop": [
+        0,
+        619,
+        400,
+        844
+      ],
+      "size": [
+        1280,
+        720
+      ]
+    },
+    "calm-drive": {
+      "source": ".tools/product-film/storyboard.png",
+      "crop": [
+        836,
+        469,
+        1672,
+        941
+      ]
+    },
+    "old-cabin-hayeon": {
+      "source": ".tools/product-film/keyframes-v5/old-cabin-hayeon.png",
+      "crop": [
+        0,
+        0,
+        1280,
+        720
+      ]
+    },
+    "new-car-family": {
+      "source": ".tools/product-film/keyframes-v5/new-car-family.png",
+      "crop": [
+        0,
+        0,
+        1280,
+        720
+      ]
+    },
+    "hello-pli-hayeon": {
+      "source": ".tools/product-film/keyframes-v5/hello-pli-hayeon.png",
+      "crop": [
+        0,
+        0,
+        1280,
+        720
+      ]
+    },
+    "hayeon-close-v5": {
+      "source": ".tools/product-film/keyframes-v5/hayeon-close-v5.png",
+      "crop": [
+        0,
+        0,
+        1280,
+        720
+      ]
+    },
+    "calm-drive-hayeon": {
+      "source": ".tools/product-film/keyframes-v5/calm-drive-hayeon.png",
+      "crop": [
+        0,
+        0,
+        1280,
+        720
+      ]
+    }
+  },
+  "shots": [
+    {
+      "id": "old-whine",
+      "generator": "wan2.2-i2v",
+      "keyframe": "old-cabin",
+      "generateSeconds": 5.0,
+      "steps": 6,
+      "seed": 20261112,
+      "prompt": "Cinematic live-action car commercial, inside an older compact sedan driving slowly through a gray city morning. In the rear child seat the little girl in a peach sweatshirt squirms restlessly, kicks her legs, throws her head back and whines toward her mother, waving one hand impatiently. The mother keeps both hands on the steering wheel and her eyes on the road, exhales a tired sigh, her shoulders tense, she makes small steering corrections. Apartment buildings and the riverside road glide past the windows with natural parallax. Gentle handheld camera sway, natural lighting, realistic skin and fabric motion."
+    },
+    {
+      "id": "old-strain",
+      "generator": "wan2.2-i2v",
+      "keyframe": "old-mom",
+      "generateSeconds": 4.5,
+      "steps": 6,
+      "seed": 41,
+      "prompt": "Cinematic live-action car commercial. Close shot of a Korean mother in her thirties with a short dark bob and an ivory knit cardigan, driving an older compact sedan on an overcast city morning. Both hands stay on the steering wheel and her eyes stay on the road ahead. Her daughter keeps whining from the back seat off screen; the mother's brow tightens, she presses her lips together, lets out a long tired sigh and blinks slowly, then refocuses on the road with visible strain, making small steering corrections. Gray apartment blocks and lamp posts slide past the side window with natural parallax. Slight handheld camera sway, soft overcast light, realistic skin and hair motion."
+    },
+    {
+      "id": "new-arrival",
+      "generator": "wan2.2-i2v",
+      "keyframe": "new-car",
+      "generateSeconds": 5.0,
+      "steps": 6,
+      "seed": 7,
+      "prompt": "Premium automotive commercial. A midnight-green luxury sedan with a thin continuous horizontal front light bar glides forward along a quiet tree-lined boulevard in warm morning sunlight. Its wheels rotate, the asphalt and lane markings flow beneath it, cherry blossom petals drift through the air, and sunlight and tree reflections slide across the polished body. The camera tracks backward smoothly at a low angle, keeping the car centered in its lane. Calm, elegant, realistic motion, shallow depth of field."
+    },
+    {
+      "id": "hello-pli",
+      "generator": "wan2.2-i2v",
+      "keyframe": "hello-pli",
+      "generateSeconds": 5.0,
+      "steps": 6,
+      "seed": 11,
+      "prompt": "Cinematic live-action car commercial inside a bright modern luxury sedan on a sunny morning drive. On the wide dashboard display a cute glowing yellow star character gently bounces and sparkles as if saying hello. In the back seat the five-year-old girl with a mustard hair clip, buckled in her child seat, looks at the screen, her face lights up, she laughs and waves happily with one hand while talking excitedly. The mother keeps both hands on the wheel and her eyes on the road, smiling softly. Trees and sunlight glide past the windows with natural parallax. Slow gentle camera push-in, warm natural light, realistic skin, hair and fabric motion."
+    },
+    {
+      "id": "hayeon-talk",
+      "generator": "wan2.2-i2v",
+      "keyframe": "hayeon-close",
+      "generateSeconds": 4.0,
+      "steps": 6,
+      "seed": 23,
+      "prompt": "Cinematic close shot inside a modern car on a sunny morning. A cheerful five-year-old Korean girl with straight bangs and a mustard hair clip, buckled into her child seat, talks excitedly toward the dashboard screen in front of her, her mouth moving clearly as she speaks, eyebrows raised and eyes sparkling, then giggles and nods. Warm sunlight and leaf shadows flicker across her face. Her mother drives in the soft-focus foreground on the right, eyes on the road. Subtle handheld camera movement, shallow depth of field, realistic hair and skin motion."
+    },
+    {
+      "id": "calm-drive",
+      "generator": "wan2.2-i2v",
+      "keyframe": "calm-drive",
+      "generateSeconds": 3.0,
+      "steps": 4,
+      "seed": 5,
+      "prompt": "Cinematic live-action car commercial. Close shot of a relaxed Korean mother with a short dark bob and an ivory cardigan driving a modern luxury car, her eyes calmly on the road ahead, a gentle content smile, steady breathing and small smooth steering movements. In the softly blurred back seat her daughter laughs and claps happily. Dappled sunlight and leaf shadows glide across the cabin. Slow lateral camera drift, warm golden morning light, realistic skin and hair motion."
+    },
+    {
+      "id": "ko-whine",
+      "keyframe": "old-cabin",
+      "generateSeconds": 5,
+      "seed": 20261113,
+      "size": [
+        896,
+        512
+      ],
+      "prompt": "Cinematic live-action Korean car commercial, natural documentary acting. Inside an older compact sedan on a gray city morning. In the rear child seat a five-year-old Korean girl in a peach sweatshirt squirms, kicks her legs and whines toward the front in Korean, with a small high child voice: \"엄마아, 심심해! 언제 도착해?\" The mother, a Korean woman in her thirties with a short dark bob, keeps both hands on the wheel and eyes on the road, sighs and answers softly in Korean with a tired warm voice: \"조금만 참아, 하연아.\" Car interior ambience, soft engine hum, turn signal ticking. No music.",
+      "generator": "ltx2.3-av",
+      "voiceTune": [
+        {
+          "from": 0.0,
+          "to": 3.05,
+          "pitch": 0.68
+        }
+      ]
+    },
+    {
+      "id": "ko-ask-pack",
+      "keyframe": "hello-pli",
+      "generateSeconds": 5,
+      "seed": 5101,
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, shallow depth of field, real lip-sync. Inside a quiet premium midnight-green electric car on a sunny tree-lined road; the dashboard screen glows with a yellow star character. In the back, a five-year-old Korean girl with a bob, bangs, a mustard hair clip and a peach sweatshirt, buckled in her rear child seat, leans forward, points at the star on the screen and asks brightly in Korean with a small, high five-year-old voice: \"플리야, 내일 뭐 챙겨?\" Then she waits with a curious smile. The mother keeps driving and smiles silently. Only her voice speaks; soft premium cabin ambience and road hum. No music, no subtitles.",
+      "generator": "ltx2.3-av",
+      "size": [
+        1024,
+        576
+      ],
+      "voiceTune": [
+        {
+          "from": 0.0,
+          "to": 4.0,
+          "pitch": 0.72
+        }
+      ]
+    },
+    {
+      "id": "ko-all-packed",
+      "keyframe": "hayeon-close",
+      "generateSeconds": 4,
+      "seed": 5102,
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, shallow depth of field, real lip-sync. Close shot of a five-year-old Korean girl with a bob, bangs, a mustard hair clip and a peach sweatshirt, buckled in her rear child seat. She nods proudly, pats her little backpack on her lap and says happily in Korean with a small, high five-year-old voice: \"다 챙겼어!\" then grins at the screen. Only her voice speaks; soft premium cabin ambience and road hum. No music, no subtitles.",
+      "generator": "ltx2.3-av",
+      "size": [
+        1024,
+        576
+      ],
+      "voiceTune": [
+        {
+          "from": 0.0,
+          "to": 4.0,
+          "pitch": 0.74
+        }
+      ]
+    },
+    {
+      "id": "ko-ask-album",
+      "keyframe": "hello-pli",
+      "generateSeconds": 5,
+      "seed": 5103,
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, shallow depth of field, real lip-sync. Inside a quiet premium midnight-green electric car on a sunny tree-lined road; the dashboard screen glows with a yellow star character. In the back, a five-year-old Korean girl with a bob, bangs, a mustard hair clip and a peach sweatshirt, buckled in her rear child seat, claps her hands, bounces in her seat and asks excitedly in Korean with a small, high five-year-old voice: \"플리야, 앨범 만들어 줘!\" The mother keeps driving and smiles silently. Only her voice speaks; soft premium cabin ambience and road hum. No music, no subtitles.",
+      "generator": "ltx2.3-av",
+      "size": [
+        1024,
+        576
+      ]
+    },
+    {
+      "id": "ko-wordchain",
+      "keyframe": "hayeon-close",
+      "generateSeconds": 4,
+      "seed": 5104,
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, shallow depth of field, real lip-sync. Close shot of a five-year-old Korean girl with a bob, bangs, a mustard hair clip and a peach sweatshirt, buckled in her rear child seat. She grins mischievously at the screen and says playfully in Korean with a small, high five-year-old voice: \"끝말잇기 하자!\" Only her voice speaks; soft premium cabin ambience and road hum. No music, no subtitles.",
+      "generator": "ltx2.3-av",
+      "size": [
+        1024,
+        576
+      ]
+    },
+    {
+      "id": "ko-hush",
+      "keyframe": "calm-drive",
+      "generateSeconds": 4,
+      "seed": 5105,
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, shallow depth of field, real lip-sync. The Korean mother in her thirties, short dark bob and ivory knit cardigan, keeps both hands on the wheel and her eyes on the road, glances briefly at the rear-view mirror with a gentle smile and says calmly in Korean in a warm adult woman's voice: \"플리야, 이제 조용히 해 줘.\" In the back the little girl puts a finger to her lips. Only the mother speaks; quiet cabin ambience. No music, no subtitles.",
+      "generator": "ltx2.3-av",
+      "size": [
+        896,
+        512
+      ]
+    },
+    {
+      "id": "ko-ending",
+      "keyframe": "calm-drive",
+      "generateSeconds": 6,
+      "seed": 5106,
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, shallow depth of field, real lip-sync. Warm late-afternoon light. The Korean mother in her thirties drives calmly, both hands on the wheel. From the back seat the five-year-old girl says sleepily and happily in Korean with a small child voice: \"플리, 고마워. 내일 또 놀자.\" The mother smiles and answers softly in Korean in a warm adult voice: \"우리 하연이, 오늘 신났네.\" Soft cabin ambience, no music, no subtitles.",
+      "generator": "ltx2.3-av",
+      "size": [
+        1024,
+        576
+      ]
+    },
+    {
+      "id": "ko-ask-pack-2",
+      "keyframe": "hello-pli",
+      "generateSeconds": 4,
+      "seed": 6101,
+      "generator": "ltx2.3-av",
+      "size": [
+        1024,
+        576
+      ],
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, shallow depth of field, real lip-sync: lips move exactly with every syllable. Inside a quiet premium midnight-green electric car on a sunny tree-lined road; the dashboard screen glows with a yellow star character. In the back, a five-year-old Korean girl with a bob, bangs, a mustard hair clip and a peach sweatshirt, buckled in her rear child seat, leans forward toward the screen, her face and mouth clearly visible, and asks in a natural, soft, mid-pitched voice of a five-year-old Korean girl — relaxed and warm, not squeaky, not shrill, not cartoonish: \"플리야, 내일 뭐 챙겨?\" Only her voice speaks; soft premium cabin ambience and road hum. No music, no subtitles, no text."
+    },
+    {
+      "id": "ko-all-packed-2",
+      "keyframe": "hayeon-close",
+      "generateSeconds": 4,
+      "seed": 6102,
+      "generator": "ltx2.3-av",
+      "size": [
+        1024,
+        576
+      ],
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, shallow depth of field, real lip-sync: lips move exactly with every syllable. Close shot of a five-year-old Korean girl with a bob, bangs, a mustard hair clip and a peach sweatshirt, buckled in her rear child seat. She pats the little backpack on her lap, nods proudly and says in a natural, soft, mid-pitched voice of a five-year-old Korean girl — relaxed and warm, not squeaky, not shrill, not cartoonish: \"다 챙겼어!\" then smiles at the screen. Only her voice speaks; soft cabin ambience. No music, no subtitles, no text."
+    },
+    {
+      "id": "ko-mom-album",
+      "keyframe": "calm-drive",
+      "generateSeconds": 5,
+      "seed": 6103,
+      "generator": "ltx2.3-av",
+      "size": [
+        1024,
+        576
+      ],
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, shallow depth of field, real lip-sync: lips move exactly with every syllable. Warm daylight. The Korean mother in her thirties with a short dark bob and an ivory cardigan drives calmly, both hands on the wheel and her eyes on the road; without looking away from the road she asks in a calm, warm adult Korean woman's voice in her thirties: \"플리야, 하연이 사진으로 앨범 만들어 줄래?\" In the softly blurred back seat her five-year-old daughter looks up at the screen, excited. Only the mother speaks; soft premium cabin ambience. No music, no subtitles, no text."
+    },
+    {
+      "id": "ko-go-there",
+      "keyframe": "calm-drive",
+      "generateSeconds": 3,
+      "seed": 6104,
+      "generator": "ltx2-turbo-av",
+      "size": [
+        896,
+        512
+      ],
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, real lip-sync: lips move exactly with every syllable. Warm late-morning light. The Korean mother in her thirties with a short dark bob and an ivory cardigan drives calmly, both hands on the wheel, glances at the rear-view mirror with a warm smile and asks in a calm, warm adult Korean woman's voice: \"하연아, 거기 가 볼까?\" In the softly blurred back seat her five-year-old daughter claps and answers happily in a natural, soft, mid-pitched child voice, not squeaky: \"응!\" Soft premium cabin ambience. No music, no subtitles, no text."
+    },
+    {
+      "id": "ko-whine-v5",
+      "keyframe": "old-cabin-hayeon",
+      "generateSeconds": 5,
+      "seed": 8101,
+      "generator": "ltx2.3-av",
+      "size": [
+        1024,
+        576
+      ],
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, shallow depth of field, real lip-sync: the speaker's lips move exactly with every syllable and stay closed when silent. Early evening on the drive home from an after-school academy. Inside an older compact car. In the rear child seat the five-year-old girl with a black bob and bangs slumps, kicks her legs and whines toward the front in a natural, soft, mid-pitched voice of a five-year-old Korean girl — relaxed and warm, not squeaky, not shrill, not cartoonish: \"엄마아, 심심해! 언제 도착해?\" The mother keeps both hands on the wheel, glances at the mirror and answers gently in a calm, warm adult Korean woman's voice in her thirties: \"조금만 참아, 하연아.\" Soft cabin ambience. No music, no subtitles, no text on screen.",
+      "voiceTune": [
+        {
+          "from": 0.0,
+          "to": 2.95,
+          "pitch": 0.76
+        }
+      ]
+    },
+    {
+      "id": "ko-newcar-v5",
+      "keyframe": "new-car-family",
+      "generateSeconds": 5,
+      "seed": 8202,
+      "generator": "ltx2.3-av",
+      "size": [
+        1024,
+        576
+      ],
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, shallow depth of field, real lip-sync: the speaker's lips move exactly with every syllable and stay closed when silent. Early evening on the drive home from an after-school academy. In an apartment parking lot beside a brand-new midnight-green sedan with a thin full-width light bar, the five-year-old girl with a black bob and bangs raises both hands and says happily in a natural, soft, low-to-mid-pitched voice of a five-year-old Korean girl — relaxed and warm, not squeaky, not shrill, not screaming: \"우와, 우리 새 차다!\" Her mother laughs, holds up the car key and says in a low, calm, mature alto voice of a Korean mother in her late thirties (a grown woman's voice, not girlish): \"오늘부터 플리도 같이 타.\" Evening city sounds. No music, no subtitles, no text on screen.",
+      "voiceTune": [
+        {
+          "from": 0.0,
+          "to": 2.15,
+          "pitch": 0.7
+        },
+        {
+          "from": 2.15,
+          "to": 5.05,
+          "pitch": 0.85
+        }
+      ]
+    },
+    {
+      "id": "ko-ask-pack-v5",
+      "keyframe": "hello-pli-hayeon",
+      "generateSeconds": 4,
+      "seed": 8103,
+      "generator": "ltx2.3-av",
+      "size": [
+        1024,
+        576
+      ],
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, shallow depth of field, real lip-sync: the speaker's lips move exactly with every syllable and stay closed when silent. Early evening on the drive home from an after-school academy. Inside the new premium sedan; the dashboard screen glows with a yellow star character. In the rear child seat the five-year-old girl with a black bob, bangs and a hair clip leans toward the screen, her face and mouth clearly visible, and asks in a natural, soft, mid-pitched voice of a five-year-old Korean girl — relaxed and warm, not squeaky, not shrill, not cartoonish: \"플리야, 내일 뭐 챙겨?\" The mother drives quietly. Only the girl speaks. Soft premium cabin ambience. No music, no subtitles, no text on screen.",
+      "voiceTune": [
+        {
+          "from": 0.8,
+          "to": 4.05,
+          "pitch": 0.76
+        }
+      ]
+    },
+    {
+      "id": "ko-all-packed-v5",
+      "keyframe": "hayeon-close-v5",
+      "generateSeconds": 4,
+      "seed": 8104,
+      "generator": "ltx2.3-av",
+      "size": [
+        1024,
+        576
+      ],
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, shallow depth of field, real lip-sync: the speaker's lips move exactly with every syllable and stay closed when silent. Early evening on the drive home from an after-school academy. Close shot of the five-year-old girl with a black bob and bangs in her rear child seat. She pats the little backpack on her lap, nods proudly and says in a natural, soft, mid-pitched voice of a five-year-old Korean girl — relaxed and warm, not squeaky, not shrill, not cartoonish: \"다 챙겼어!\" then smiles at the screen. Only her voice speaks. Soft premium cabin ambience. No music, no subtitles, no text on screen.",
+      "voiceTune": [
+        {
+          "from": 1.1,
+          "to": 2.7,
+          "pitch": 0.8
+        }
+      ]
+    },
+    {
+      "id": "ko-mom-album-v5",
+      "keyframe": "calm-drive-hayeon",
+      "generateSeconds": 5,
+      "seed": 8205,
+      "generator": "ltx2.3-av",
+      "size": [
+        1024,
+        576
+      ],
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, shallow depth of field, real lip-sync: the speaker's lips move exactly with every syllable and stay closed when silent. Early evening on the drive home from an after-school academy. The mother drives the new sedan with both hands on the wheel and her eyes on the road; without looking away she asks in a low, calm, mature alto voice of a Korean mother in her late thirties (a grown woman's voice, not girlish): \"플리야, 하연이 사진으로 앨범 만들어 줄래?\" In the back her five-year-old daughter looks up at the screen, excited. Only the mother speaks. Soft premium cabin ambience. No music, no subtitles, no text on screen.",
+      "voiceTune": [
+        {
+          "from": 0.0,
+          "to": 5.05,
+          "pitch": 0.88
+        }
+      ]
+    },
+    {
+      "id": "ko-go-there-v5",
+      "keyframe": "calm-drive-hayeon",
+      "generateSeconds": 5,
+      "seed": 8206,
+      "generator": "ltx2.3-av",
+      "size": [
+        1024,
+        576
+      ],
+      "prompt": "Cinematic live-action Korean car commercial, natural unforced acting, shallow depth of field, real lip-sync: the speaker's lips move exactly with every syllable and stay closed when silent. Early evening on the drive home from an after-school academy. The mother drives the new sedan, glances at the rear-view mirror with a warm smile and asks in a low, calm, mature alto voice of a Korean mother in her late thirties (a grown woman's voice, not girlish): \"하연아, 거기 가 볼까?\" In the back her five-year-old daughter claps and answers happily in a natural, soft, low-to-mid-pitched voice of a five-year-old Korean girl — relaxed and warm, not squeaky, not shrill, not screaming: \"응! 가자!\" The mother laughs softly. Soft premium cabin ambience. No music, no subtitles, no text on screen.",
+      "voiceTune": [
+        {
+          "from": 2.35,
+          "to": 5.05,
+          "pitch": 0.8
+        }
+      ]
+    }
+  ],
+  "generationBudget": "Free Hugging Face ZeroGPU quota (about 5 GPU-minutes per day). hayeon-answer and drive-on were not generated after the quota ran out on 2026-11-12; their story beats are carried by hayeon-talk, calm-drive and the end card instead of stills.",
+  "edit": [
+    {
+      "vertical": "whine",
+      "clip": "clean/whine-hd.mp4",
+      "in": 0.0,
+      "out": 3.42,
+      "speed": 1.0,
+      "look": "before"
+    },
+    {
+      "vertical": "newcar",
+      "clip": "clean/newcar-hd.mp4",
+      "in": 0.0,
+      "out": 2.14,
+      "speed": 1.0,
+      "look": "after",
+      "zoom": 1.16
+    },
+    {
+      "vertical": "askpack",
+      "clip": "clean/askpack-hd.mp4",
+      "in": 0.64,
+      "out": 2.53,
+      "speed": 1.0,
+      "look": "after",
+      "grade": "colorchannelmixer=rr=1.023:gg=1:bb=0.976"
+    },
+    {
+      "app": "pack",
+      "in": 22.54,
+      "out": 27.37,
+      "speed": 1.0,
+      "region": [
+        1560,
+        290,
+        950,
+        770
+      ],
+      "closeAt": 0.0
+    },
+    {
+      "vertical": "momalbum",
+      "clip": "clean/momalbum-hd.mp4",
+      "in": 0.0,
+      "out": 2.0,
+      "speed": 1.0,
+      "look": "after",
+      "subject": "mother",
+      "grade": "colorchannelmixer=rr=0.830:gg=1:bb=1.343"
+    },
+    {
+      "app": "album",
+      "in": 26.15,
+      "out": 30.81,
+      "speed": 1.0,
+      "region": [
+        1230,
+        210,
+        1040,
+        880
+      ],
+      "closeAt": 1.2
+    },
+    {
+      "app": "album",
+      "in": 32.09,
+      "out": 36.33,
+      "speed": 1.0,
+      "region": [
+        1230,
+        210,
+        1040,
+        880
+      ],
+      "closeAt": 0.0
+    },
+    {
+      "app": "stop",
+      "in": 13.49,
+      "out": 20.26,
+      "speed": 1.0,
+      "region": [
+        1560,
+        290,
+        950,
+        770
+      ],
+      "closeAt": 0.0
+    },
+    {
+      "vertical": "gothere-mom",
+      "clip": "clean/gothere-mom-hd.mp4",
+      "in": 0.0,
+      "out": 1.51,
+      "speed": 1.0,
+      "look": "after",
+      "subject": "mother",
+      "grade": "colorchannelmixer=rr=0.815:gg=1:bb=1.392"
+    },
+    {
+      "vertical": "gothere-child",
+      "clip": "clean/gothere-child-hd.mp4",
+      "in": 0.0,
+      "out": 0.93,
+      "speed": 1.0,
+      "look": "after",
+      "grade": "colorchannelmixer=rr=1.029:gg=1:bb=0.970"
+    },
+    {
+      "app": "stop",
+      "in": 29.51,
+      "out": 35.76,
+      "speed": 1.0,
+      "region": [
+        1560,
+        290,
+        950,
+        770
+      ],
+      "closeAt": 0.0
+    }
+  ],
+  "endCard": {
+    "seconds": 2.1,
+    "brand": "플리",
+    "copy": "우리 가족의 이동 친구",
+    "platform": "with Pleos",
+    "blinkAt": 2.6,
+    "transition": {
+      "type": "fade",
+      "seconds": 0.5
+    }
+  },
+  "dialogue": [
+    {
+      "id": "snd-0-whine",
+      "speaker": "",
+      "text": "",
+      "at": 0.0,
+      "audio": {
+        "source": ".tools/product-film/vertical/whine.mp4",
+        "from": 0.0,
+        "to": 3.433,
+        "denoise": "afftdn=nr=30:nf=-60",
+        "gate": "agate=threshold=0.0316:ratio=4:range=0.1:attack=5:release=120",
+        "fadeIn": 0.0,
+        "fadeOut": 0.02
+      }
+    },
+    {
+      "id": "cap-0-0",
+      "speaker": "하연",
+      "text": "엄마아, 심심해! 언제 도착해?",
+      "captionOnly": true,
+      "at": 0.0,
+      "seconds": 3.62,
+      "until": 3.393,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "snd-1-newcar",
+      "speaker": "",
+      "text": "",
+      "at": 3.433,
+      "audio": {
+        "source": ".tools/product-film/vertical/newcar.mp4",
+        "from": 0.0,
+        "to": 2.133,
+        "denoise": "afftdn=nr=16:nf=-46",
+        "gate": "agate=threshold=0.0316:ratio=4:range=0.1:attack=5:release=120",
+        "fadeIn": 0.0,
+        "fadeOut": 0.0
+      }
+    },
+    {
+      "id": "cap-1-0",
+      "speaker": "하연",
+      "text": "우와, 우리 새 차다!",
+      "captionOnly": true,
+      "at": 3.433,
+      "seconds": 2.4,
+      "until": 5.526,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "snd-2-askpack",
+      "speaker": "",
+      "text": "",
+      "at": 5.566,
+      "audio": {
+        "source": ".tools/product-film/vertical/askpack.mp4",
+        "from": 0.64,
+        "to": 2.54,
+        "denoise": "afftdn=nr=16:nf=-46",
+        "gate": "agate=threshold=0.0316:ratio=4:range=0.1:attack=5:release=120",
+        "fadeIn": 0.08,
+        "fadeOut": 0.0
+      }
+    },
+    {
+      "id": "cap-2-0",
+      "speaker": "하연",
+      "text": "플리야, 내일 뭐 챙겨?",
+      "captionOnly": true,
+      "at": 5.666,
+      "seconds": 2.02,
+      "until": 7.426,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "snd-3-pack-answer",
+      "speaker": "",
+      "text": "",
+      "at": 7.466,
+      "audio": {
+        "source": ".tools/product-film/app-takes/pack-clean.wav",
+        "from": 22.797,
+        "to": 27.63
+      }
+    },
+    {
+      "id": "cap-3-0",
+      "speaker": "플리",
+      "text": "내일 수원 컨벤션 센터 다녀오기가 있어서 원복, 운동화, 겉옷 챙기면 돼!",
+      "captionOnly": true,
+      "at": 7.619,
+      "seconds": 4.76,
+      "until": 12.259,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "snd-4-momalbum",
+      "speaker": "",
+      "text": "",
+      "at": 12.299,
+      "audio": {
+        "source": ".tools/product-film/vertical/momalbum.mp4",
+        "from": 0.0,
+        "to": 2.0,
+        "denoise": "afftdn=nr=16:nf=-46",
+        "gate": "agate=threshold=0.0316:ratio=4:range=0.1:attack=5:release=120",
+        "fadeIn": 0.0,
+        "fadeOut": 0.13
+      }
+    },
+    {
+      "id": "cap-4-0",
+      "speaker": "엄마",
+      "text": "하연이 사진으로 앨범 만들어 줄래?",
+      "captionOnly": true,
+      "at": 12.299,
+      "seconds": 2.09,
+      "until": 14.259,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "snd-5-album-reply",
+      "speaker": "",
+      "text": "",
+      "at": 14.299,
+      "audio": {
+        "source": ".tools/product-film/app-takes/album-clean.wav",
+        "from": 26.391,
+        "to": 31.058
+      }
+    },
+    {
+      "id": "cap-5-0",
+      "speaker": "플리",
+      "text": "네, 하연이가 나온 사진만 골라 '하연의 추억 앨범'을 만들었어요.",
+      "captionOnly": true,
+      "at": 14.448,
+      "seconds": 3.47,
+      "until": 18.926,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "cap-5-1",
+      "speaker": "플리",
+      "text": "하연아, 같이 볼까?",
+      "captionOnly": true,
+      "at": 17.708,
+      "seconds": 1.45,
+      "until": 18.926,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "snd-6-album-page",
+      "speaker": "",
+      "text": "",
+      "at": 18.966,
+      "audio": {
+        "source": ".tools/product-film/app-takes/album-clean.wav",
+        "from": 32.331,
+        "to": 36.564
+      }
+    },
+    {
+      "id": "cap-6-0",
+      "speaker": "플리",
+      "text": "추석 행사 날, 하연이가 종이접기 도구로 멋진 작품을 만들고 있네!",
+      "captionOnly": true,
+      "at": 19.115,
+      "seconds": 4.09,
+      "until": 23.159,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "snd-7-stop-offer",
+      "speaker": "",
+      "text": "",
+      "at": 23.199,
+      "audio": {
+        "source": ".tools/product-film/app-takes/stop-clean.wav",
+        "from": 13.847,
+        "to": 20.614
+      }
+    },
+    {
+      "id": "cap-7-0",
+      "speaker": "플리",
+      "text": "가는 길에 경기도서관이 있어요.",
+      "captionOnly": true,
+      "at": 23.252,
+      "seconds": 1.65,
+      "until": 29.926,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "cap-7-1",
+      "speaker": "플리",
+      "text": "하연이가 요즘 그림 좋아하잖아요.",
+      "captionOnly": true,
+      "at": 24.832,
+      "seconds": 2.57,
+      "until": 29.926,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "cap-7-2",
+      "speaker": "플리",
+      "text": "그림책 보러 잠깐 들를까요?",
+      "captionOnly": true,
+      "at": 27.262,
+      "seconds": 2.06,
+      "until": 29.926,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "cap-7-3",
+      "speaker": "플리",
+      "text": "2분만 더 걸려요.",
+      "captionOnly": true,
+      "at": 29.112,
+      "seconds": 0.86,
+      "until": 29.926,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "snd-8-gothere-mom",
+      "speaker": "",
+      "text": "",
+      "at": 29.966,
+      "audio": {
+        "source": ".tools/product-film/vertical/gothere-mom.mp4",
+        "from": 0.0,
+        "to": 1.5,
+        "denoise": "afftdn=nr=16:nf=-46",
+        "gate": "agate=threshold=0.0316:ratio=4:range=0.1:attack=5:release=120",
+        "fadeIn": 0.0,
+        "fadeOut": 0.04
+      }
+    },
+    {
+      "id": "cap-8-0",
+      "speaker": "엄마",
+      "text": "하연아, 거기 가 볼까?",
+      "captionOnly": true,
+      "at": 29.966,
+      "seconds": 1.69,
+      "until": 31.426,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "snd-9-gothere-child",
+      "speaker": "",
+      "text": "",
+      "at": 31.466,
+      "audio": {
+        "source": ".tools/product-film/vertical/gothere-child.mp4",
+        "from": 0.0,
+        "to": 0.933,
+        "denoise": "afftdn=nr=16:nf=-46",
+        "gate": "agate=threshold=0.0316:ratio=4:range=0.1:attack=5:release=120",
+        "fadeIn": 0.0,
+        "fadeOut": 0.0
+      }
+    },
+    {
+      "id": "cap-9-0",
+      "speaker": "하연",
+      "text": "응, 좋아!",
+      "captionOnly": true,
+      "at": 31.466,
+      "seconds": 1.19,
+      "until": 32.359,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "snd-10-stop-reply",
+      "speaker": "",
+      "text": "",
+      "at": 32.399,
+      "audio": {
+        "source": ".tools/product-film/app-takes/stop-clean.wav",
+        "from": 29.867,
+        "to": 36.1
+      }
+    },
+    {
+      "id": "cap-10-0",
+      "speaker": "플리",
+      "text": "좋아요!",
+      "captionOnly": true,
+      "at": 32.552,
+      "seconds": 0.76,
+      "until": 38.592,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "cap-10-1",
+      "speaker": "플리",
+      "text": "경기도서관을 경유지로 넣었어요.",
+      "captionOnly": true,
+      "at": 33.532,
+      "seconds": 2.13,
+      "until": 38.592,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "cap-10-2",
+      "speaker": "플리",
+      "text": "8분 뒤에 도착해요.",
+      "captionOnly": true,
+      "at": 35.472,
+      "seconds": 1.11,
+      "until": 38.592,
+      "marginV": 1400,
+      "align": 8
+    },
+    {
+      "id": "cap-10-3",
+      "speaker": "플리",
+      "text": "하연아, 그림책 같이 고르자!",
+      "captionOnly": true,
+      "at": 36.402,
+      "seconds": 2.1,
+      "until": 38.592,
+      "marginV": 1400,
+      "align": 8
+    }
+  ],
+  "sound": {
+    "music": {
+      "file": ".tools/product-film/weave/music-minimax.wav",
+      "start": 1.433,
+      "gainDb": -20
+    }
+  },
+  "completion": "Render only from generated clips whose provenance matches this plan. Review acting, motion, continuity, cabin geometry, dialogue placement and captions on rendered frames before staging for the portal. A missing clip means incomplete, never a still substitute.",
+  "labels": [
+    {
+      "number": "01",
+      "title": "내일 챙길 것",
+      "detail": "어린이집 일정과 날씨를 읽고 챙길 것만",
+      "at": 5.616,
+      "until": 12.219
+    },
+    {
+      "number": "02",
+      "title": "엄마가 부탁한 앨범",
+      "detail": "하연이 얼굴만 골라 이야기로",
+      "at": 12.349,
+      "until": 23.119
+    },
+    {
+      "number": "03",
+      "title": "가는 길에 들를 곳",
+      "detail": "경로·시간·운영시간·하연이 취향으로 먼저 제안",
+      "at": 23.249,
+      "until": 38.552
+    }
+  ],
+  "footageTag": "실제 Pleos 에뮬레이터 화면 · 플리 앱",
+  "appFrame": {
+    "mode": "closeup",
+    "stream": [
+      2560,
+      1440
+    ],
+    "fullY": 346,
+    "closeY": "center",
+    "closeMargin": 28,
+    "areaHeight": 1300,
+    "region": [
+      1560,
+      290,
+      950,
+      770
+    ],
+    "closeAt": 1.0,
+    "crop": [
+      0,
+      0,
+      2560,
+      1440
+    ],
+    "redact": false,
+    "background": {
+      "image": ".tools/product-film/weave-refs/bluehour-cabin.png",
+      "crop": [
+        1312,
+        0,
+        608,
+        1080
+      ],
+      "knee": 34,
+      "lowerShade": 0.55
+    }
+  },
+  "appTakes": "media/pli-film/app-takes.json (recorded by scripts/record-film-features.py into .tools/product-film/app-takes)",
+  "identity": "Vertical 1080x1920 short (v9). Family scenes: made 9:16 on Hugging Face (PRO, ZeroGPU) by LTX-2 audio-to-video from 9:16 frames of the earlier Seedance scenes or new front views by Qwen-Image-Edit-2511 (with the family's reference photos), speaking the Seedance voices the user accepted, sped up 1.05-1.12x; the captions the model burned in were removed (PP-OCRv3 text detection + DiffuEraser on Hugging Face) and the clips upscaled 2x (Real-ESRGAN). Feature scenes: real recordings of the public Pli APK on the Pleos emulator (full display 2560x1440, night mode), answering those voices on a weekday 17:30 drive home in Gwanggyo; Pli speaks with its own voice (Supertonic 3 F3, 1.35x).",
+  "transcriptNote": "플리 제품 소개 영상(세로) · 가족 장면은 허깅페이스 PRO(LTX-2)로 세로 화면에 맞춰 새로 만들었고(목소리는 앞서 만든 장면의 목소리), 기능 장면은 공개용 플리 앱이 그 목소리를 실제로 듣고 답한 화면과 음성입니다.",
+  "overlayY": 70,
+  "labelX": 48,
+  "speechCheck": {
+    "whine": {
+      "lines": [
+        {
+          "speaker": "하연",
+          "text": "엄마아, 심심해! 언제 도착해?",
+          "heard": "엄마 심심해 언제 도착",
+          "script": "엄마아, 심심해! 언제 도착해?",
+          "start": 0.0,
+          "end": 3.37,
+          "match": 0.9
+        }
+      ],
+      "start": 0.0,
+      "end": 3.37,
+      "whisper": "엄마 심심해 언제 도착",
+      "sensevoice": "엄마 심심해 언제 도착"
+    },
+    "newcar": {
+      "lines": [
+        {
+          "speaker": "하연",
+          "text": "우와, 우리 새 차다!",
+          "heard": "우와! 우리 새차다!",
+          "script": "우와, 우리 새 차다!",
+          "start": 0.0,
+          "end": 2.15,
+          "match": 1.0
+        }
+      ],
+      "start": 0.0,
+      "end": 2.15,
+      "whisper": "우와! 우리 새차다!",
+      "sensevoice": "우와 우리 세차다"
+    },
+    "askpack": {
+      "lines": [
+        {
+          "speaker": "하연",
+          "text": "플리야, 내일 뭐 챙겨?",
+          "heard": "플리야, 내일 뭐 챙겨?",
+          "script": "플리야, 내일 뭐 챙겨?",
+          "start": 0.74,
+          "end": 2.51,
+          "match": 1.0
+        }
+      ],
+      "start": 0.74,
+      "end": 2.51,
+      "whisper": "플리야, 내일 뭐 챙겨?",
+      "sensevoice": "플야 내일 못 챙겨"
+    },
+    "momalbum": {
+      "lines": [
+        {
+          "speaker": "엄마",
+          "text": "하연이 사진으로 앨범 만들어 줄래?",
+          "heard": "하연이 사진으로 앨범 만들어줄래?",
+          "script": "하연이 사진으로 앨범 만들어 줄래?",
+          "start": 0.0,
+          "end": 1.84,
+          "match": 1.0
+        }
+      ],
+      "start": 0.0,
+      "end": 1.84,
+      "whisper": "하연이 사진으로 앨범 만들어줄래?",
+      "sensevoice": "하연이 사진으로 앨범 만들어 줄래"
+    },
+    "gothere-mom": {
+      "lines": [
+        {
+          "speaker": "엄마",
+          "text": "하연아, 거기 가 볼까?",
+          "heard": "하연아 거기 가볼까?",
+          "script": "하연아, 거기 가 볼까?",
+          "start": 0.0,
+          "end": 1.44,
+          "match": 1.0
+        }
+      ],
+      "start": 0.0,
+      "end": 1.44,
+      "whisper": "하연아 거기 가볼까?",
+      "sensevoice": "하현아 거기 가볼까"
+    },
+    "gothere-child": {
+      "lines": [
+        {
+          "speaker": "하연",
+          "text": "응, 좋아!",
+          "heard": "응 좋아!",
+          "script": "응, 좋아!",
+          "start": 0.0,
+          "end": 0.94,
+          "match": 1.0
+        }
+      ],
+      "start": 0.0,
+      "end": 0.94,
+      "whisper": "응 좋아!",
+      "sensevoice": "응 좋아"
+    }
+  },
+  "dropped": [],
+  "notes": [
+    {
+      "text": "음성 인식·응답 대기 2.9초 생략",
+      "at": 7.466,
+      "until": 9.666,
+      "x": 40,
+      "y": 1316
+    },
+    {
+      "text": "음성 인식·응답 대기 2.5초 생략",
+      "at": 14.299,
+      "until": 16.499,
+      "x": 40,
+      "y": 1316
+    },
+    {
+      "text": "음성 인식·응답 대기 2.8초 생략",
+      "at": 32.399,
+      "until": 34.599,
+      "x": 40,
+      "y": 1316
+    }
+  ],
+  "tagY": 1316,
+  "tagRight": 40,
+  "panelTop": 1190,
+  "scrimTop": 1150
+}
