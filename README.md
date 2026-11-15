@@ -82,14 +82,10 @@
 ## 🎬 제품 영상
 
 <table>
-<tr>
-<td width="62%"><a href="docs/media/pli-film-landscape.mp4"><img src="docs/images/film-landscape.jpg" alt="가로 영상"></a></td>
-<td width="38%"><a href="demo-v2/preview.mp4"><img src="docs/images/film-vertical.jpg" alt="세로 영상"></a></td>
-</tr>
-<tr>
-<td><b>가로 1920×1080 · 41.3초</b> — <a href="docs/media/pli-film-landscape.mp4">docs/media/pli-film-landscape.mp4</a><br>Pleos 화면 전체로 보는 하원길</td>
-<td><b>세로 1080×1920 · 41.0초</b> — <a href="demo-v2/preview.mp4">demo-v2/preview.mp4</a><br>플리 카드를 크게 보는 숏폼</td>
-</tr>
+<tr><td><a href="docs/media/pli-film-landscape.mp4"><img src="docs/images/film-landscape.jpg" alt="가로 영상"></a></td></tr>
+<tr><td align="center"><b>▶ 가로 1920×1080 · 41.3초</b> — <a href="docs/media/pli-film-landscape.mp4">docs/media/pli-film-landscape.mp4</a> · Pleos 화면 전체로 보는 하원길</td></tr>
+<tr><td><a href="demo-v2/preview.mp4"><img src="docs/images/film-vertical.jpg" alt="세로 영상"></a></td></tr>
+<tr><td align="center"><b>▶ 세로 1080×1920 · 41.0초</b> — <a href="demo-v2/preview.mp4">demo-v2/preview.mp4</a> · 칭얼거림 → 준비물 → 앨범 → “응, 좋아!”</td></tr>
 </table>
 
 - 가족 장면은 AI 영상 모델로 연출하고, **기능 장면(준비물·앨범·들를 곳)은 실제 Pleos 에뮬레이터에서 실제 APK를 녹화**했습니다.
@@ -137,35 +133,21 @@
 헤드유닛 · 차량 엣지 · MCP 도구의 3계층입니다. 엣지가 없어도 앱은 헤드유닛 안의 음성 엔진과 규칙으로 계속 말합니다.
 
 ```mermaid
-flowchart LR
-  subgraph HU["Pleos 헤드유닛 · 플리 APK"]
-    UI["GPU 스테이지 UI<br/>RenderBudget"]
-    CTRL["대화 제어<br/>오디오 포커스 · 쉿 · 주행 제한"]
-    SDK["Pleos SDK<br/>Vehicle · NaviHelper · FusedLocation<br/>SpeechToText · TextToSpeech"]
-    FB["헤드유닛 음성 엔진<br/>Supertonic 3 · ONNX Runtime"]
+flowchart TB
+  subgraph HU["① Pleos 헤드유닛 · 플리 APK — Kotlin · Jetpack Compose"]
+    direction LR
+    SDK["Pleos SDK<br/>Vehicle · NaviHelper · FusedLocation<br/>SpeechToText · TextToSpeech"] ~~~ CTRL["대화 제어<br/>오디오 포커스 · 쉿 · 주행 제한"] ~~~ UI["GPU 스테이지 UI<br/>RenderBudget"] ~~~ FB["헤드유닛 음성 엔진<br/>Supertonic 3 · ONNX Runtime<br/>(엣지가 끊겨도 말함)"]
   end
-  subgraph EDGE["차량 엣지 컴퓨터 · Pli Edge AI"]
-    ASR["음성 인식<br/>SenseVoice + 아동 음성 보정"]
-    AGENT["에이전트 루프<br/>계획 → 도구 → 관찰 → 답"]
-    LLM["엣지 LLM<br/>Kanana 1.5 2.1B · llama.cpp"]
-    TTS["엣지 음성<br/>Supertonic 3 GPU + 상용 음성 캐시"]
-    VIS["얼굴 인식 앨범<br/>YuNet + SFace"]
-    PLACE["장소 팩 · 날씨<br/>OpenStreetMap · Open-Meteo"]
+  subgraph EDGE["② 차량 엣지 컴퓨터 · Pli Edge AI"]
+    direction LR
+    ASR["음성 인식<br/>SenseVoice<br/>+ 아동 음성 보정"] ~~~ AGENT["에이전트 루프<br/>계획 → 도구 → 관찰 → 답"] ~~~ LLM["엣지 LLM<br/>Kanana 1.5 2.1B"] ~~~ TOOLS["장소 팩 · 날씨<br/>얼굴 인식 앨범"] ~~~ TTS["엣지 음성<br/>Supertonic 3 GPU<br/>+ 상용 음성 캐시"]
   end
-  subgraph MCP["MCP 도구 서버"]
-    CAL["어린이집 일정 · 준비물"]
-    ALB["앨범"]
-    EXT["확장: 학원 · 가족 캘린더"]
+  subgraph MCP["③ MCP 도구 서버"]
+    direction LR
+    CAL["어린이집 일정 · 준비물"] ~~~ ALB["앨범"] ~~~ EXT["확장: 학원 · 가족 캘린더"]
   end
-  CTRL -->|"16kHz PCM"| ASR
-  AGENT -->|"NDJSON 단계 스트림"| UI
-  CTRL -->|"문장"| TTS
-  AGENT --> LLM
-  AGENT --> PLACE
-  AGENT --> VIS
-  AGENT -->|"tools/call · JSON-RPC"| CAL
-  AGENT -->|"tools/call"| ALB
-  SDK -.->|"차량 신호 · 경로 · 위치"| AGENT
+  HU <-->|"16kHz PCM · 말 · 차량 상태  ⇄  NDJSON 단계 · 답 · 음성"| EDGE
+  EDGE <-->|"tools/call · JSON-RPC (읽기 전용 · 루프백 · 토큰)"| MCP
 ```
 
 <details>

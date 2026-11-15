@@ -55,18 +55,21 @@ Kotlin · Jetpack Compose · 패키지 `ai.teammoon.pli`.
 ## 4. 음성 파이프라인
 
 ```mermaid
-flowchart LR
-  MIC["마이크<br/>16kHz PCM"] --> GATE["UtteranceGate<br/>한 번에 한 스트림"]
-  GATE --> E_ASR{"엣지 ASR<br/>SenseVoice"}
-  E_ASR -->|"없음"| P_STT{"Pleos SpeechToText<br/>ON_DEVICE"}
-  P_STT -->|"실패"| VOSK["Vosk 한국어<br/>(APK 내장)"]
-  E_ASR --> CTRL["ConversationController"]
-  P_STT --> CTRL
-  VOSK --> CTRL
-  CTRL --> GROUPS["SpeechGroups<br/>답 전체를 한 번에"]
-  GROUPS --> E_TTS{"엣지 음성<br/>캐시 → Supertonic 3 GPU"}
-  E_TTS -->|"실패"| HU_TTS{"헤드유닛 음성 엔진<br/>Supertonic 3 · ONNX Runtime"}
-  HU_TTS -->|"실패"| P_TTS["Pleos TextToSpeech<br/>ON_DEVICE"]
+flowchart TB
+  subgraph LISTEN["듣기"]
+    direction LR
+    MIC["마이크<br/>16kHz PCM"] --> GATE["UtteranceGate<br/>한 번에 한 스트림"] --> E_ASR["① 엣지 SenseVoice"]
+    E_ASR -.->|"엣지 없음"| P_STT["② Pleos SpeechToText<br/>ON_DEVICE"]
+    P_STT -.->|"실패"| VOSK["③ Vosk 한국어<br/>APK 내장"]
+  end
+  CTRL["ConversationController<br/>대화 상태 기계"]
+  subgraph SPEAK["말하기"]
+    direction LR
+    GROUPS["SpeechGroups<br/>답 전체를 한 번에"] --> E_TTS["① 엣지 음성<br/>캐시 → Supertonic 3 GPU"]
+    E_TTS -.->|"실패"| HU_TTS["② 헤드유닛 Supertonic 3<br/>ONNX Runtime"]
+    HU_TTS -.->|"실패"| P_TTS["③ Pleos TextToSpeech<br/>ON_DEVICE"]
+  end
+  LISTEN --> CTRL --> SPEAK
 ```
 
 **듣기**
