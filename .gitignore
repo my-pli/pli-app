@@ -1,0 +1,55 @@
+# 플리 저장소는 소스·고정 시험 입력·공개 문서만 관리합니다.
+# 도구·모델·빌드 결과·비공개 가족 자료는 `./pleos setup`과 docs/manual/INSTALL.md 절차로 재현합니다.
+
+# 로컬 도구·모델·비공개 자료 (SDK, 에뮬레이터, 가상환경, 엣지 AI 모델, 가족 사진)
+/.tools/
+
+# 빌드 결과물 — APK·제품 영상·전달 묶음은 릴리스로 배포
+/artifacts/
+*.apk
+*.aab
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+
+# Android
+android/.gradle/
+android/.kotlin/
+android/**/build/
+android/local.properties
+android/app/src/main/assets/model-ko/
+.idea/
+*.iml
+
+# Python · Node
+**/__pycache__/
+*.pyc
+node_modules/
+*.log
+
+# 이전 웹 시안과 옛 묶음 (최종 APK와 무관)
+/pli/
+/demo/
+/pli-mvp-source.zip
+
+# 검사: 코드와 고정 입력만 관리, 실행 기록·캡처는 제외
+/qa/*
+!/qa/native/
+/qa/native/*
+!/qa/native/*.py
+!/qa/native/*.mjs
+!/qa/native/fixtures/
+
+# 문서: 공개 문서와 매뉴얼만 관리, 내부 감사·작업 기록은 제외
+/TODO.md
+/docs/*
+!/docs/manual/
+!/docs/images/
+!/docs/media/
+!/docs/proposal-assets/
+!/docs/licenses/
+!/docs/pli-pleos-proposal.html
+!/docs/pli-pleos-product-brief.pdf
+!/docs/THIRD-PARTY.md
