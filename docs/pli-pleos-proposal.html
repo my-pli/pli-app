@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="UTF-8">
+<title>플리 · Pleos 차 안의 가족 AI 에이전트</title>
+<style>
+@font-face{font-family:Pretendard;src:url('../android/app/src/main/res/font/pretendard.ttf')}
+:root{--ink:#050819;--mid:#0c1433;--card:rgba(255,255,255,.06);--edge:rgba(255,255,255,.16);--mint:#6ef0c8;--aurora:#3ee6c1;--gold:#ffd36b;--violet:#a493ff;--sky:#8fb8ff;--rose:#ff8fc7;--coral:#ff8a7a;--cream:#f7f2e8;--soft:#c9cbe8;--dim:#8e93c2}
+*{box-sizing:border-box}
+body{margin:0;background:#11131d;font-family:Pretendard,sans-serif;color:var(--cream);-webkit-font-smoothing:antialiased}
+section{width:1280px;height:720px;position:relative;overflow:hidden;padding:52px 64px;page-break-after:always;
+  background:radial-gradient(900px 420px at 85% -10%,rgba(62,230,193,.16),transparent 60%),radial-gradient(700px 380px at -5% 110%,rgba(164,147,255,.14),transparent 60%),linear-gradient(180deg,#050819,#0b1230)}
+header{display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:2px;color:var(--dim)}
+header b{font-size:26px;letter-spacing:-1px;background:linear-gradient(90deg,var(--gold),#ffb36b);-webkit-background-clip:text;color:transparent}
+footer{position:absolute;left:64px;right:64px;bottom:26px;display:flex;justify-content:space-between;font-size:11px;color:var(--dim);letter-spacing:1px}
+.kicker{font-size:13px;letter-spacing:3px;color:var(--mint);font-weight:700;margin:26px 0 10px}
+h1{font-size:64px;line-height:1.15;letter-spacing:-2.5px;margin:0 0 18px;font-weight:700}
+h2{font-size:40px;line-height:1.25;letter-spacing:-1.5px;margin:0 0 18px;font-weight:700}
+h3{font-size:19px;margin:0 0 8px;font-weight:700}
+p{font-size:16px;line-height:1.65;color:var(--soft);margin:6px 0}
+.grad{background:linear-gradient(90deg,var(--cream),var(--gold));-webkit-background-clip:text;color:transparent}
+.mint{color:var(--mint)}.gold{color:var(--gold)}.violet{color:var(--violet)}.sky{color:var(--sky)}
+.row{display:flex;gap:18px}.col{flex:1}
+.card{background:var(--card);border:1px solid var(--edge);border-radius:20px;padding:20px 22px}
+.card p{font-size:14.5px}
+.tag{display:inline-block;font-size:11px;letter-spacing:1.5px;padding:4px 10px;border-radius:30px;border:1px solid var(--edge);color:var(--soft);margin:0 6px 6px 0}
+.tag.m{color:var(--mint);border-color:rgba(110,240,200,.45)}.tag.g{color:var(--gold);border-color:rgba(255,211,107,.45)}.tag.v{color:var(--violet);border-color:rgba(164,147,255,.45)}
+.stat{font-size:40px;font-weight:700;letter-spacing:-1.5px;line-height:1.05}.stat small{font-size:15px;color:var(--soft);font-weight:500;letter-spacing:0}
+.label{font-size:12px;color:var(--dim);letter-spacing:1px;margin-top:6px}
+.shot{border-radius:14px;border:1px solid var(--edge);display:block;width:100%;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.note{font-size:11.5px;color:var(--dim);line-height:1.6}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+td,th{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;vertical-align:top;color:var(--soft)}
+th{color:var(--dim);font-weight:600;font-size:11.5px;letter-spacing:1px}
+td b{color:var(--cream)}
+.step{display:flex;gap:12px;align-items:flex-start;margin:8px 0}
+.dot{width:26px;height:26px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--ink);background:var(--mint)}
+.step b{font-size:15px}.step span{display:block;font-size:13px;color:var(--soft);margin-top:2px}
+.quote{font-size:19px;line-height:1.6;color:var(--cream);border-left:3px solid var(--gold);padding:6px 0 6px 16px;margin:10px 0}
+svg text{font-family:Pretendard,sans-serif}
+@page{size:1280px 720px;margin:0}
+@media print{body{background:none}}
+</style>
+
+<section>
+  <header><b>pli ✦</b><span>TEAM MOON · PLEOS CONNECT</span></header>
+  <div style="display:flex;gap:40px;align-items:center;margin-top:58px">
+    <div style="flex:1.05">
+      <div class="kicker">IN-CAR FAMILY AI AGENT · PLEOS NATIVE</div>
+      <h1>운전하는 부모 대신,<br><span class="grad">뒷좌석 아이 곁에.</span></h1>
+      <p style="font-size:19px;color:var(--cream)">플리는 차가 아는 것(경로·속도·위치)과 가족이 아는 것(어린이집 일정·앨범)을 엮습니다. 운전 중 화면을 볼 수 없는 부모 대신 아이와 이야기하고, 먼저 제안하는 <b>Pleos 차 안의 에이전틱 AI</b>입니다.</p>
+      <div style="margin-top:18px"><span class="tag m">Pleos SDK 5종</span><span class="tag g">에이전틱 루프</span><span class="tag v">MCP 도구</span><span class="tag">온디바이스 음성</span><span class="tag">엣지 LLM</span></div>
+    </div>
+    <div style="flex:1"><img class="shot" src="proposal-assets/stop.jpg" alt="주행 중 플리가 집 가는 길에 들를 곳을 제안하는 실제 Pleos 화면"></div>
+  </div>
+  <footer><span>실제 Pleos Connect 2.1 에뮬레이터 화면 · 주행 32km/h에서 플리가 먼저 제안</span><span>01 / 12</span></footer>
+</section>
+
+<section>
+  <header><b>pli ✦</b><span>01 · WHY THE CAR</span></header>
+  <div class="kicker">THE MOMENT ONLY A CAR HAS</div>
+  <h2>하원길 20분, 부모는 운전하고<br>아이는 뒷좌석에서 혼자입니다.</h2>
+  <div class="row" style="margin-top:22px">
+    <div class="card col"><h3 class="gold">“엄마, 심심해. 언제 도착해?”</h3><p>아이는 지루하고, 부모는 운전 중이라 화면을 볼 수도 손을 쓸 수도 없습니다.</p></div>
+    <div class="card col"><h3 class="gold">“내일 뭐 챙겨야 하지?”</h3><p>어린이집 일정·준비물은 휴대폰 앱 안에 있습니다. 운전 중에는 열어 볼 수 없습니다.</p></div>
+    <div class="card col"><h3 class="gold">“오늘 하연이 뭐 했을까?”</h3><p>선생님이 올린 사진은 수십 장. 우리 아이가 나온 장면만 골라 보기는 어렵습니다.</p></div>
+    <div class="card col"><h3 class="gold">“가는 길에 들를 데 없나?”</h3><p>날씨·시간·아이 취향을 함께 따져 경로 위에서 고르는 일은 운전자에게 무리입니다.</p></div>
+  </div>
+  <div class="quote" style="margin-top:28px">차는 이미 <span class="mint">어디로 가는지, 얼마나 남았는지, 지금 어디인지</span> 압니다. 가족 서비스는 <span class="gold">아이의 일정과 사진</span>을 압니다.<br>플리는 둘을 엮어 <b>차 안에서만 가능한 순간</b>을 만듭니다.</div>
+  <footer><span>대상: 미취학·초등 저학년 자녀와 등·하원, 학원 이동이 잦은 가족</span><span>02 / 12</span></footer>
+</section>
+
+<section>
+  <header><b>pli ✦</b><span>02 · ONE DRIVE HOME</span></header>
+  <div class="kicker">SCENARIO · 학원 → 집, 12분</div>
+  <h2>말 한마디와 차량 신호만으로 이어지는 하원길</h2>
+  <div class="row" style="margin-top:14px;gap:14px">
+    <div class="col">
+      <img class="shot" src="proposal-assets/pack.jpg" alt="준비물 체크 화면">
+      <div class="step"><div class="dot">1</div><div><b>하연 “플리야, 내일 뭐 챙겨?”</b><span>어린이집 일정을 MCP로 조회 → 내일은 주말, 수요일 행사 준비물 2가지를 카드로.</span></div></div>
+    </div>
+    <div class="col">
+      <img class="shot" src="proposal-assets/album2.jpg" alt="이야기 앨범 화면">
+      <div class="step"><div class="dot" style="background:var(--gold)">2</div><div><b>엄마 “하연이 사진으로 앨범 만들어 줄래?”</b><span>얼굴 인식으로 하연이만 고르고(다른 아이 얼굴 흐림), 엣지 LLM이 쪽마다 이야기를 들려줍니다.</span></div></div>
+    </div>
+    <div class="col">
+      <img class="shot" src="proposal-assets/stop-added.jpg" alt="경유지 추가 화면">
+      <div class="step"><div class="dot" style="background:var(--violet)">3</div><div><b>플리가 먼저 “가는 길에 도서관이 있어요”</b><span>주행·경로·날씨·아이 관심사로 고른 곳을 제안. 엄마 “하연아, 거기 가 볼까?” → Pleos 경유지 추가.</span></div></div>
+    </div>
+  </div>
+  <footer><span>세 화면 모두 실제 APK가 실제 음성을 듣고 답한 Pleos 에뮬레이터 화면</span><span>03 / 12</span></footer>
+</section>
+
+<section>
+  <header><b>pli ✦</b><span>03 · CAR-NATIVE UX</span></header>
+  <div class="kicker">DESIGN PRINCIPLES</div>
+  <h2>질문에 답하는 챗봇이 아니라,<br><span class="grad">차를 읽고 먼저 움직이는 동승자</span></h2>
+  <div class="row" style="margin-top:20px">
+    <div class="card col"><div class="stat mint">Eyes-free</div><div class="label">운전자는 말로만</div><p>부모의 요청은 음성 한 문장. 확인이 필요한 일(경로 변경)은 “거기 가 볼까?” 같은 자연스러운 대화로 승인합니다.</p></div>
+    <div class="card col"><div class="stat gold">Proactive</div><div class="label">차량 신호가 트리거</div><p>주행 속도·남은 시간·경로가 조건을 만족하고 대화가 비어 있을 때만 플리가 먼저 말합니다. 한 번의 여정에 한 번.</p></div>
+    <div class="card col"><div class="stat violet">Seat-aware</div><div class="label">운전석과 뒷좌석</div><p>부모에게는 존댓말로 판단 근거를, 아이에게는 반말로 놀이를. 같은 답도 듣는 사람에 맞게 말합니다.</p></div>
+    <div class="card col"><div class="stat sky">Yields</div><div class="label">길 안내가 먼저</div><p>내비 음성이 나오면 Android 오디오 포커스로 즉시 멈추고, “쉿” 한마디면 조용해집니다.</p></div>
+  </div>
+  <p class="note" style="margin-top:22px">화면은 목소리를 돕는 보조 수단입니다. Pleos 왼쪽 차량 화면과 함께, 플리 화면에는 <b style="color:var(--cream)">우리 차 패널</b>(뒷좌석 아이·기어·속도·배터리·학원→집 경로와 들를 곳)을 실시간으로 그립니다.</p>
+  <footer><span>UX 기준: 주행 중 터치 없이 완결되는 핵심 흐름</span><span>04 / 12</span></footer>
+</section>
+
+<section>
+  <header><b>pli ✦</b><span>04 · SYSTEM ARCHITECTURE</span></header>
+  <div class="kicker">HEAD UNIT · EDGE · MCP</div>
+  <h2 style="margin-bottom:8px">헤드유닛·차량 엣지·MCP 도구의 3계층</h2>
+  <svg width="1152" height="440" viewBox="0 0 1152 440">
+    <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#8fb8ff"/></marker></defs>
+    <rect x="0" y="10" width="360" height="410" rx="22" fill="rgba(255,255,255,.05)" stroke="rgba(255,211,107,.5)"/>
+    <text x="22" y="44" fill="#ffd36b" font-size="13" letter-spacing="2" font-weight="700">PLEOS HEAD UNIT · PLI APK</text>
+    <text x="22" y="66" fill="#8e93c2" font-size="12">Kotlin · Jetpack Compose · Android Automotive</text>
+    <g font-size="14" fill="#f7f2e8">
+      <rect x="18" y="84" width="324" height="58" rx="12" fill="rgba(255,255,255,.06)"/><text x="34" y="108" font-weight="700">GPU 스테이지 UI</text><text x="34" y="129" fill="#c9cbe8" font-size="12">Choreographer vsync · 하드웨어 캔버스 · 58~59fps</text>
+      <rect x="18" y="152" width="324" height="78" rx="12" fill="rgba(255,255,255,.06)"/><text x="34" y="176" font-weight="700">Pleos SDK</text><text x="34" y="197" fill="#c9cbe8" font-size="12">Vehicle 2.3.2 · NaviHelper 3.0.5 · FusedLocation 1.1.3</text><text x="34" y="216" fill="#c9cbe8" font-size="12">SpeechToText · TextToSpeech 3.3.1 (대체 경로)</text>
+      <rect x="18" y="240" width="324" height="78" rx="12" fill="rgba(110,240,200,.10)" stroke="rgba(110,240,200,.45)"/><text x="34" y="264" font-weight="700" fill="#6ef0c8">헤드유닛 음성 엔진 (대체 경로)</text><text x="34" y="285" fill="#c9cbe8" font-size="12">Supertonic 3 · ONNX Runtime Android</text><text x="34" y="304" fill="#c9cbe8" font-size="12">음성 팩 OTA 설치 · 해시 검증 · 엣지 끊겨도 말함</text>
+      <rect x="18" y="328" width="324" height="76" rx="12" fill="rgba(255,255,255,.06)"/><text x="34" y="352" font-weight="700">대화 제어 · 안전</text><text x="34" y="373" fill="#c9cbe8" font-size="12">오디오 포커스 · 쉿 · 주행 제한(UX restriction)</text><text x="34" y="392" fill="#c9cbe8" font-size="12">먼저 제안 조건 · 경유지 승인</text>
+    </g>
+    <rect x="396" y="10" width="384" height="410" rx="22" fill="rgba(255,255,255,.05)" stroke="rgba(110,240,200,.55)"/>
+    <text x="418" y="44" fill="#6ef0c8" font-size="13" letter-spacing="2" font-weight="700">PLI EDGE AI · 차량 엣지 컴퓨터</text>
+    <text x="418" y="66" fill="#8e93c2" font-size="12">Python asyncio · NDJSON 단계 스트리밍</text>
+    <g font-size="14" fill="#f7f2e8">
+      <rect x="414" y="84" width="348" height="58" rx="12" fill="rgba(255,255,255,.06)"/><text x="430" y="108" font-weight="700">음성 인식 · 음성 합성 (GPU)</text><text x="430" y="129" fill="#c9cbe8" font-size="12">SenseVoice + 아동 음성 보정 · Supertonic 3 + 상용 음성 답 캐시</text>
+      <rect x="414" y="152" width="348" height="78" rx="12" fill="rgba(164,147,255,.12)" stroke="rgba(164,147,255,.5)"/><text x="430" y="176" font-weight="700" fill="#a493ff">에이전트 루프</text><text x="430" y="197" fill="#c9cbe8" font-size="12">계획 → 도구 실행 → 관찰 → 답, 단계마다 화면에 공개</text><text x="430" y="216" fill="#c9cbe8" font-size="12">가족 정보는 생성 금지 · 도구 결과로만 말하기</text>
+      <rect x="414" y="240" width="168" height="78" rx="12" fill="rgba(255,255,255,.06)"/><text x="430" y="264" font-weight="700">로컬 LLM</text><text x="430" y="285" fill="#c9cbe8" font-size="12">Kanana 1.5 2.1B</text><text x="430" y="304" fill="#c9cbe8" font-size="12">llama.cpp · Q4 · CPU</text>
+      <rect x="594" y="240" width="168" height="78" rx="12" fill="rgba(255,255,255,.06)"/><text x="610" y="264" font-weight="700">비전</text><text x="610" y="285" fill="#c9cbe8" font-size="12">YuNet 검출 + SFace</text><text x="610" y="304" fill="#c9cbe8" font-size="12">아이 찾기 · 타인 흐림</text>
+      <rect x="414" y="328" width="348" height="76" rx="12" fill="rgba(255,255,255,.06)"/><text x="430" y="352" font-weight="700">장소 팩 · 날씨</text><text x="430" y="373" fill="#c9cbe8" font-size="12">OpenStreetMap 오프라인 팩(경로 주변 장소)</text><text x="430" y="392" fill="#c9cbe8" font-size="12">기상 관측·예보 → 실외/실내 판단</text>
+    </g>
+    <rect x="816" y="10" width="336" height="410" rx="22" fill="rgba(255,255,255,.05)" stroke="rgba(143,184,255,.5)"/>
+    <text x="838" y="44" fill="#8fb8ff" font-size="13" letter-spacing="2" font-weight="700">MCP TOOL SERVERS</text>
+    <text x="838" y="66" fill="#8e93c2" font-size="12">Model Context Protocol · JSON-RPC</text>
+    <g font-size="14" fill="#f7f2e8">
+      <rect x="834" y="84" width="300" height="146" rx="12" fill="rgba(143,184,255,.10)" stroke="rgba(143,184,255,.45)"/><text x="850" y="108" font-weight="700" fill="#8fb8ff">어린이집 알림장·앨범 MCP</text>
+      <text x="850" y="132" fill="#c9cbe8" font-size="12">get_calendar · 월별 일정·준비물</text><text x="850" y="152" fill="#c9cbe8" font-size="12">list_albums · 최근 앨범 목록</text><text x="850" y="172" fill="#c9cbe8" font-size="12">get_album · 사진 메타데이터</text>
+      <text x="850" y="200" fill="#8e93c2" font-size="11.5">읽기 전용 · 루프백 · 베어러 토큰</text><text x="850" y="218" fill="#8e93c2" font-size="11.5">임의 경로 저장(save_dir) 거부</text>
+      <rect x="834" y="240" width="300" height="78" rx="12" fill="rgba(255,255,255,.06)"/><text x="850" y="264" font-weight="700">확장 도구</text><text x="850" y="285" fill="#c9cbe8" font-size="12">학원 일정·가족 캘린더·장소 검색</text><text x="850" y="304" fill="#c9cbe8" font-size="12">같은 MCP 규격으로 플러그인</text>
+      <rect x="834" y="328" width="300" height="76" rx="12" fill="rgba(255,255,255,.06)"/><text x="850" y="352" font-weight="700">개인정보 경계</text><text x="850" y="373" fill="#c9cbe8" font-size="12">원본 사진·일정은 비공개 저장소</text><text x="850" y="392" fill="#c9cbe8" font-size="12">공개 체험은 별도 프로필</text>
+    </g>
+    <g stroke="#8fb8ff" stroke-width="2" fill="none" marker-end="url(#a)"><path d="M360 190 H392"/><path d="M396 210 H364"/><path d="M780 150 H812"/><path d="M816 170 H784"/></g>
+    <g font-size="11" fill="#8fb8ff"><text x="362" y="180">PCM</text><text x="362" y="228">단계·답</text><text x="782" y="140">tools/call</text><text x="784" y="188">결과</text></g>
+  </svg>
+  <footer><span>시연 구성: 에뮬레이터 속 APK가 개발 PC를 차량 엣지 컴퓨터로 사용(10.0.2.2) · 실차는 차량 내 컴퓨트 모듈 또는 플리 클라우드로 분리 배치</span><span>05 / 12</span></footer>
+</section>
+
+<section>
+  <header><b>pli ✦</b><span>05 · AGENTIC LOOP</span></header>
+  <div class="kicker">PLAN → ACT → OBSERVE → ANSWER</div>
+  <h2>답하기 전에, 확인하고 고릅니다</h2>
+  <div class="row" style="margin-top:8px">
+    <div class="col" style="flex:1.1">
+      <div class="card" style="padding:16px 20px">
+        <p class="note" style="margin:0 0 6px">실제 실행 기록 · 주행 중 먼저 제안(집 가는 길)</p>
+        <div class="step"><div class="dot">1</div><div><b>차량 신호 읽기</b><span>기어 D · 32km/h · 배터리 64% · 목적지 집 · 도착까지 12분</span></div></div>
+        <div class="step"><div class="dot">2</div><div><b>할 일 고르기</b><span>가는 길 들를 곳 (주행 중 먼저 제안)</span></div></div>
+        <div class="step"><div class="dot">3</div><div><b>경로 확인</b><span>집까지 12분 (Pleos 내비)</span></div></div>
+        <div class="step"><div class="dot">4</div><div><b>날씨 확인</b><span>수원시 · 흐림 · 10°C · 비 없음</span></div></div>
+        <div class="step"><div class="dot">5</div><div><b>하연이가 좋아하는 것</b><span>앨범 기록 · 그림 18번</span></div></div>
+        <div class="step"><div class="dot">6</div><div><b>가는 길 장소 고르기</b><span>경로 옆 1곳 중 경기도서관 · 7분 뒤 (21:00까지)</span></div></div>
+      </div>
+    </div>
+    <div class="col">
+      <table>
+        <tr><th>도구</th><th>근거 데이터</th></tr>
+        <tr><td><b>차량 상태</b></td><td>Pleos Vehicle: 기어·속도·배터리·와이퍼·문</td></tr>
+        <tr><td><b>가는 길 들를 곳</b></td><td>NaviHelper 경로 · 위치 · 장소 팩 · 날씨 · 아이 관심사 → addWaypoint</td></tr>
+        <tr><td><b>챙길 것</b></td><td>어린이집 MCP <span class="mint">get_calendar</span> · 날씨 · 목적지</td></tr>
+        <tr><td><b>이야기 앨범</b></td><td>MCP <span class="mint">list_albums/get_album</span> · 얼굴 인식 · LLM 캡션</td></tr>
+        <tr><td><b>날씨</b></td><td>현재 관측 + 12시간 예보</td></tr>
+        <tr><td><b>열린 질문</b></td><td>로컬 LLM, 아이 말투 70자 이내</td></tr>
+      </table>
+      <p class="note" style="margin-top:12px">계획은 한국어 의도 규칙으로 즉시 결정합니다(소형 LLM의 라우팅 오류 회피). LLM은 관찰을 말로 바꾸는 데만 쓰고, 일정·준비물 같은 가족 사실은 절대 생성하지 않습니다. 단계는 앱 화면에 실시간 스트리밍됩니다.</p>
+    </div>
+  </div>
+  <footer><span>단계 기록은 엣지 서버 NDJSON 스트림 그대로 · 화면의 EDGE AGENT 칩으로 노출</span><span>06 / 12</span></footer>
+</section>
+
+<section>
+  <header><b>pli ✦</b><span>06 · MCP</span></header>
+  <div class="kicker">MODEL CONTEXT PROTOCOL</div>
+  <h2>가족 서비스는 MCP 도구로,<br>에이전트는 규격으로 부릅니다</h2>
+  <div class="row" style="margin-top:16px">
+    <div class="card col"><h3 class="sky">왜 MCP인가</h3><p>어린이집 알림장, 학원 일정, 가족 캘린더처럼 서비스마다 다른 API를 <b style="color:var(--cream)">같은 tools/call 규격</b>으로 감쌉니다. 에이전트 코드는 그대로 두고 도구만 추가하면 기능이 늘어납니다.</p></div>
+    <div class="card col"><h3 class="sky">무엇을 부르나</h3><p><span class="mint">get_calendar(month)</span> → 일정과 “준비물 :” 줄을 사실 목록으로.<br><span class="mint">list_albums</span>·<span class="mint">get_album</span> → 최근 앨범 사진을 비공개 폴더로 동기화한 뒤 얼굴 인식.</p></div>
+    <div class="card col"><h3 class="sky">어떻게 지키나</h3><p>읽기 전용 도구만 공개 · 127.0.0.1 루프백 · 베어러 토큰 · 임의 저장 경로 거부 · 응답 캐시 10분 · 실패 시 “확인하지 못했어요”로 정직하게.</p></div>
+  </div>
+  <div class="card" style="margin-top:18px;font-family:monospace;font-size:13px;line-height:1.7;color:var(--soft)">
+    → {"method":"tools/call","params":{"name":"get_calendar","arguments":{"month":"2026-11"}}}<br>
+    ← "- 11/18(수) · &lt;지역사회연계활동 '수원 컨벤션 센터 다녀오기'&gt; · … · 준비물 : 원복, 운동화"<br>
+    <span class="gold">⇒ 플리: “내일은 주말이라 쉬는 날이야! 수요일 수원 컨벤션 센터 다녀오기가 있어서 원복, 운동화 챙기면 돼!”</span>
+  </div>
+  <footer><span>MCP 서버: Node · 같은 모듈을 앨범 동기화 스크립트가 재사용</span><span>07 / 12</span></footer>
+</section>
+
+<section>
+  <header><b>pli ✦</b><span>07 · ROUTE-AWARE SUGGESTION</span></header>
+  <div class="row" style="align-items:center;gap:30px">
+    <div class="col">
+      <div class="kicker">ON THE WAY HOME</div>
+      <h2>경로 위에서,<br>지금 이 아이에게 맞는 곳</h2>
+      <div class="step"><div class="dot">1</div><div><b>경로 기하</b><span>현재 위치→목적지 선분에 장소를 투영해, 진행 8~92% 구간·이탈 0.9km 이내만 남깁니다.</span></div></div>
+      <div class="step"><div class="dot" style="background:var(--gold)">2</div><div><b>지금의 조건</b><span>낮·맑음·3~31°C면 놀이터 있는 공원, 비·어두움·추위면 도서관.</span></div></div>
+      <div class="step"><div class="dot" style="background:var(--violet)">3</div><div><b>아이의 취향</b><span>앨범 캡션에서 가장 많은 활동(그림 18회) → “그림책 보러 갈까요?”</span></div></div>
+      <div class="step"><div class="dot" style="background:var(--sky)">4</div><div><b>승인 → Pleos 경유지</b><span>“거기 가 볼까?”에 NaviHelper.addWaypoint(FIRST). 거절이면 바로 집으로.</span></div></div>
+      <p class="note">장소 데이터: OpenStreetMap(ODbL) 오프라인 팩 · 광교 일대 88곳(공원 40·놀이터 37·도서관 11), 양재 일대 82곳. 경기도서관 운영시간은 공개 안내(2026-10-21 수정)에서 가져왔습니다. 말하는 사실은 모두 팩·날씨·차량 신호에서만 가져옵니다.</p>
+    </div>
+    <div class="col"><img class="shot" src="proposal-assets/stop-added.jpg" alt="경유지 추가 화면"></div>
+  </div>
+  <footer><span>시연: 에뮬레이터 내비는 경로 계산을 지원하지 않아 같은 필드에 ‘시연 경로(학원→집)’를 채우고 화면에 표시</span><span>08 / 12</span></footer>
+</section>
+
+<section>
+  <header><b>pli ✦</b><span>08 · VOICE & VISION</span></header>
+  <div class="kicker">ON-DEVICE · EDGE</div>
+  <h2>낭독이 아니라 대화하는 목소리</h2>
+  <div class="row" style="margin-top:14px">
+    <div class="card col"><div class="stat mint">0.05~0.6<small>초</small></div><div class="label">생기 있는 답 · 엣지 GPU</div><p>자주 하는 답은 상용 음성 MiniMax Speech 2.8 HD의 밝고 들뜬 아이 목소리로 미리 만들어 두고(받아쓰기로 발음 확인) 바로 들려줍니다. 처음 듣는 답은 Supertonic 3이 엣지 GPU에서 즉시 합성하고, 다음부터는 생기 있는 녹음으로 바뀝니다. 엣지가 끊기면 헤드유닛 엔진, 그다음 Pleos TTS로 자동 전환합니다.</p></div>
+    <div class="card col"><div class="stat gold">201<small>MB</small></div><div class="label">음성 팩 · fp16 저장</div><p>APK(180MB)와 분리된 음성 팩을 한 번 설치하고 해시로 검증합니다. 원본과 들리는 차이 0.06dB(log-mel). 숫자는 “두 가지·이십 분”처럼 한국어로 읽습니다.</p></div>
+    <div class="card col"><div class="stat violet">0.928</div><div class="label">아동 음성 인식 벤치</div><p>기본 주파수가 높은 아이 목소리는 스펙트럼을 성인 쪽으로 보정한 판독을 함께 만들어 더 깨끗한 쪽을 고릅니다.</p></div>
+    <div class="card col"><div class="stat sky">≥0.72</div><div class="label">단체 사진 얼굴 일치 기준</div><p>YuNet 검출 + SFace 신원 비교. 단체 사진은 더 엄격한 기준을 쓰고, 다른 아이 얼굴은 모두 흐림 처리합니다.</p></div>
+  </div>
+  <p class="note" style="margin-top:20px">생동감(음성 감정 모델의 각성도)은 낭독체 Supertonic 0.55에서 캐시된 답 0.84로 올랐고(사람이 연기한 엄마 대사 0.65), 받아쓰기로 발음을 확인한 녹음만 씁니다. 처음 듣는 답은 음색이 다른 Supertonic으로 먼저 나가므로, 실제 서비스에서는 같은 상용 음성의 실시간 합성으로 맞추는 것이 다음 과제입니다. 답 전체를 한 번에 합성해 문장 사이 쉼이 0.3초를 넘지 않아, 낭독체가 아닌 대화체로 들립니다. 재생은 Pleos TTS와 같은 이벤트 계약(start → done/stop)을 따르므로 오디오 포커스·쉿·완료 감시가 그대로 적용됩니다.</p>
+  <footer><span>측정: 엣지 RTX 4070 노트북 GPU · Pleos Connect 2.1 에뮬레이터 · 2026-11-13</span><span>09 / 12</span></footer>
+</section>
+
+<section>
+  <header><b>pli ✦</b><span>09 · PLEOS NATIVE</span></header>
+  <div class="kicker">SDK INTEGRATION & PERFORMANCE</div>
+  <h2>차의 신호를 아이의 언어로</h2>
+  <div class="row" style="margin-top:10px">
+    <div class="col">
+      <table>
+        <tr><th>Pleos SDK</th><th>플리가 쓰는 곳</th></tr>
+        <tr><td><b>Vehicle 2.3.2</b></td><td>기어·속도로 출발·주행 판단, 와이퍼로 비 이야기, 2열 문, 배터리·충전</td></tr>
+        <tr><td><b>NaviHelper 3.0.5</b></td><td>목적지·남은 시간, 도착 이벤트, 경로 요청, <span class="mint">addWaypoint</span></td></tr>
+        <tr><td><b>FusedLocation 1.1.3</b></td><td>현재 위치 → 날씨·경로 주변 장소</td></tr>
+        <tr><td><b>SpeechToText 3.3.1</b></td><td>엣지 인식이 없을 때의 차량 내 인식</td></tr>
+        <tr><td><b>TextToSpeech 3.3.1</b></td><td>온디바이스 음성의 대체 경로</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <div class="row"><div class="card col"><div class="stat mint">58~59<small>fps</small></div><div class="label">플리 캐릭터 렌더링</div></div><div class="card col"><div class="stat gold">85→0<small>%</small></div><div class="label">대기 중 메인 스레드</div></div></div>
+      <div class="card" style="margin-top:14px"><p>소프트웨어 창에서 전체를 다시 그리던 원인(0.1초마다 바뀌던 마이크 음량 상태, 의미 없는 상태 갱신)을 제거하고, 캐릭터와 배경을 Choreographer vsync + 하드웨어 캔버스로 분리했습니다.</p></div>
+    </div>
+  </div>
+  <footer><span>Kotlin · Jetpack Compose · 공식 Pleos Connect 2.1 에뮬레이터 · 고정 SDK 버전</span><span>10 / 12</span></footer>
+</section>
+
+<section>
+  <header><b>pli ✦</b><span>10 · TRUST</span></header>
+  <div class="kicker">PRIVACY & SAFETY BY DESIGN</div>
+  <h2>아이의 데이터는 차 안에서,<br>운전자의 주의는 길 위에</h2>
+  <div class="row" style="margin-top:18px">
+    <div class="card col"><h3 class="mint">로컬 우선</h3><p>음성 인식·LLM·얼굴 인식·장소 선택은 엣지에서. 원본 사진은 비공개 폴더(권한 700/600), EXIF 제거, 원본 마이크 녹음은 보관하지 않습니다.</p></div>
+    <div class="card col"><h3 class="gold">사실만 말하기</h3><p>일정·준비물·장소는 도구 결과로만. 모르면 “확인하지 못했어요”. 위험한 요청은 부드럽게 거절하고 놀이로 돌립니다.</p></div>
+    <div class="card col"><h3 class="violet">보호자 승인</h3><p>경로 변경은 부모의 한마디 승인 뒤에만. 먼저 제안은 여정당 한 번, 대화가 비어 있고 주행 중일 때만.</p></div>
+    <div class="card col"><h3 class="sky">주의 분산 최소화</h3><p>내비 안내가 나오면 즉시 양보, “쉿”이면 다시 부를 때까지 조용히. 주행 제한 중에는 표시를 줄이고 음성 중심.</p></div>
+  </div>
+  <footer><span>공개 체험은 별도 프로필 · 가족 개인 자료는 공개 화면에 쓰지 않음</span><span>11 / 12</span></footer>
+</section>
+
+<section>
+  <header><b>pli ✦</b><span>11 · STATUS & NEXT</span></header>
+  <div class="kicker">WHAT RUNS TODAY · WHAT COMES NEXT</div>
+  <h2>지금 동작하는 것과, 실차로 가는 길</h2>
+  <div class="row" style="margin-top:14px">
+    <div class="card col"><h3 class="mint">동작·검증</h3><p>• 실제 APK가 Pleos 에뮬레이터 마이크로 듣고 답함<br>• 플리 목소리: 엣지 GPU 합성 + 헤드유닛 대체 엔진<br>• MCP 일정·앨범, 얼굴 인식 앨범<br>• 주행 중 먼저 제안 → 경유지 승인<br>• 자동 검사: 단위·엣지 AI·기기 계측·포털·런타임 가드</p></div>
+    <div class="card col"><h3 class="gold">시연 한정</h3><p>• 엣지 AI는 개발 PC가 차량 엣지 컴퓨터 역할(에뮬레이터 → 10.0.2.2)<br>• 에뮬레이터 내비가 경로를 계산하지 않아 ‘시연 경로’ 사용<br>• 장소 팩은 광교·양재 일대(시연 경로: 광교역 근처 학원 → 광교호수공원 남쪽 집)</p></div>
+    <div class="card col"><h3 class="violet">다음 단계</h3><p>• 실차 헤드유닛에서 음성 합성·인식 지연 측정<br>• 엣지 계층의 차량 내 모듈 / 플리 클라우드 배치 결정<br>• 장소 팩 자동 갱신(경로 기반 타일)<br>• 실제 부모·아이 발화와 실내 소음 평가</p></div>
+  </div>
+  <div class="quote" style="margin-top:22px">“하연아, 거기 가 볼까?” — 플리가 만드는 건 답변이 아니라 <span class="gold">가족이 함께 고르는 다음 장면</span>입니다.</div>
+  <footer><span>/app 음성 앱 체험 · /pleos 실제 Pleos 화면 · /resources 소개 영상·기획서</span><span>12 / 12</span></footer>
+</section>
+</html>
