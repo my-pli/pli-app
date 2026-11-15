@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-feature android:name="android.hardware.type.automotive" android:required="true"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="true"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.car.permission.CAR_SPEED"/>
+    <uses-permission android:name="android.car.permission.CAR_POWERTRAIN"/>
+    <uses-permission android:name="android.car.permission.CAR_ENERGY"/>
+    <uses-permission android:name="android.car.permission.CAR_ENERGY_PORTS"/>
+    <uses-permission android:name="pleos.car.permission.CAR_DOORS"/>
+    <uses-permission android:name="pleos.car.permission.CAR_ENERGY"/>
+    <uses-permission android:name="pleos.car.permission.CAR_LIGHTS"/>
+    <uses-permission android:name="pleos.car.permission.CAR_MILEAGE"/>
+    <uses-permission android:name="pleos.car.permission.READ_WINDSHIELD_WIPERS"/>
+    <uses-permission android:name="pleos.car.permission.NAVI_ROUTE"/>
+    <uses-permission android:name="pleos.car.permission.NAVI_ROUTE_SEARCH"/>
+    <uses-permission android:name="pleos.car.permission.FUSED_LOCATION"/>
+    <uses-permission android:name="pleos.car.permission.TTS_SERVICE"/>
+    <uses-permission android:name="pleos.car.permission.STT_SERVICE"/>
+    <uses-permission android:name="pleos.car.permission.CAR_WINDOWS"/>
+    <uses-permission android:name="pleos.car.permission.CAR_DRIVE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <queries><intent><action android:name="android.intent.action.TTS_SERVICE"/></intent><package android:name="ai.pleos.playground.service.location.fused"/></queries>
+    <application android:name=".PliApplication" android:label="플리 · 두근두근 가는 길" android:icon="@drawable/ic_pli" android:allowBackup="false" android:theme="@style/Theme.Pli" android:supportsRtl="true" android:networkSecurityConfig="@xml/network_security_config">
+        <uses-library android:name="android.car" android:required="false"/>
+        <meta-data android:name="com.android.automotive" android:resource="@xml/automotive_app_desc"/>
+        <activity android:name=".MainActivity" android:hardwareAccelerated="false" android:launchMode="singleTask" android:exported="true" android:resizeableActivity="true" android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden" android:theme="@style/Theme.Pli">
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+            <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
+        </activity>
+        <service android:name=".voice.CompanionService" android:process=":voice" android:exported="false" android:foregroundServiceType="microphone|mediaPlayback"/>
+        <service android:name=".vehicle.VehicleService" android:process=":vehicle" android:exported="false"/>
+        <provider android:name=".DemoStateProvider" android:authorities="ai.teammoon.pli.demo" android:exported="true" android:permission="android.permission.DUMP" android:grantUriPermissions="false"/>
+    </application>
+</manifest>

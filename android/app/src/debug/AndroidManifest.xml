@@ -1,0 +1,1 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"><application><receiver android:name=".DebugReceiver" android:exported="true"><intent-filter><action android:name="ai.teammoon.pli.DEBUG"/></intent-filter></receiver></application></manifest>

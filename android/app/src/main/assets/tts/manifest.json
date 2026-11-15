@@ -1,0 +1,47 @@
+{
+ "model": "Supertone Supertonic 3 (OpenRAIL-M)",
+ "voice": "F3",
+ "weights": "fp16 storage, fp32 compute",
+ "encoderError": 0.0009,
+ "melDistanceDb": 0.055,
+ "halvedTensors": {
+  "duration_predictor": 27,
+  "text_encoder": 46,
+  "vector_estimator": 99,
+  "vocoder": 23
+ },
+ "files": {
+  "LICENSE": {
+   "bytes": 15007,
+   "sha256": "0d944a9110fed9a9602d60e0423a272903e7bd21ab060490774efc77c2275e9f"
+  },
+  "duration_predictor.onnx": {
+   "bytes": 1993709,
+   "sha256": "6f53e96d47917a28918ed0970abf393089e3bc6d7d6bf7b115342a1bdae89c36"
+  },
+  "text_encoder.onnx": {
+   "bytes": 18507282,
+   "sha256": "72be6349af5261c58c6ee146fbfc5dfc220696481afa0eef0bbb3f26386d5709"
+  },
+  "tts.json": {
+   "bytes": 8253,
+   "sha256": "42078d3aef1cd43ab43021f3c54f47d2d75ceb4e75f627f118890128b06a0d09"
+  },
+  "unicode_indexer.json": {
+   "bytes": 277676,
+   "sha256": "9bf7346e43883a81f8645c81224f786d43c5b57f3641f6e7671a7d6c493cb24f"
+  },
+  "vector_estimator.onnx": {
+   "bytes": 128978099,
+   "sha256": "24462ecf73e86eb5cfe354d4c3cf28cd1ebe7d9b6a585cfc0faeeedc5a9bf889"
+  },
+  "vocoder.onnx": {
+   "bytes": 50924181,
+   "sha256": "806f66167b763ab220fee2fdd38184951339e6c28371fc13e1d99f8edac77c49"
+  },
+  "voice.json": {
+   "bytes": 290794,
+   "sha256": "12f6ef2573baa2defa1128069cb59f203e3ab67c92af77b42df8a0e3a2f7c6ab"
+  }
+ }
+}
