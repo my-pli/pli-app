@@ -1,0 +1,17 @@
+[Unit]
+Description=Pli edge LLM (llama.cpp, Kanana 1.5 2.1B, CPU, loopback only)
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=@PLI_ROOT@
+ExecStart=@PLI_ROOT@/.tools/edge-ai/bin/llama-b12314/llama-server -m @PLI_ROOT@/.tools/edge-ai/models/kanana-1.5-2.1b/kakaocorp.kanana-1.5-2.1b-instruct-2505.Q4_K_M.gguf -c 8192 -t 10 -tb 16 -np 1 --host 127.0.0.1 --port 8891 --jinja --no-webui --cache-reuse 256
+Restart=on-failure
+RestartSec=3
+UMask=0077
+NoNewPrivileges=true
+# Answer the child promptly when other jobs on the same host contend for CPU.
+CPUWeight=400
+
+[Install]
+WantedBy=default.target

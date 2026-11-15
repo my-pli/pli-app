@@ -1,0 +1,4 @@
+# .tools/tts-gpu-venv — edge voice server (Supertonic 3 on CUDA)
+numpy==2.5.4
+onnxruntime-gpu==1.22.0
+soundfile==0.14.0

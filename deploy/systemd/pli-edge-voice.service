@@ -1,0 +1,12 @@
+[Unit]
+Description=Pli edge voice (Supertonic 3 on the GPU + lively answer cache, loopback only)
+After=network.target
+
+[Service]
+WorkingDirectory=@PLI_ROOT@
+ExecStart=@PLI_ROOT@/.tools/tts-gpu-venv/bin/python @PLI_ROOT@/scripts/edge_voice_server.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target

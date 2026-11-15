@@ -1,0 +1,18 @@
+[Unit]
+Description=Pli edge AI server (SenseVoice ASR + agent + family album, loopback only)
+After=pli-edge-llm.service
+Wants=pli-edge-llm.service
+
+[Service]
+Type=simple
+WorkingDirectory=@PLI_ROOT@
+Environment=PYTHONUNBUFFERED=1
+ExecStart=@PLI_ROOT@/.tools/edge-venv/bin/python @PLI_ROOT@/scripts/edge_ai_server.py
+Restart=on-failure
+RestartSec=3
+UMask=0077
+NoNewPrivileges=true
+CPUWeight=400
+
+[Install]
+WantedBy=default.target

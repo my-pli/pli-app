@@ -1,0 +1,628 @@
+{
+ "source": "OpenStreetMap contributors (ODbL) via Nominatim",
+ "area": "yangjae",
+ "bbox": [
+  127.015,
+  37.495,
+  127.07,
+  37.45
+ ],
+ "built": "2026-11-14",
+ "places": [
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.47117,
+   "lon": 127.04517,
+   "osm": "way/292054609"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.4784,
+   "lon": 127.05449,
+   "osm": "way/888051940"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.47902,
+   "lon": 127.05344,
+   "osm": "way/888051942"
+  },
+  {
+   "kind": "playground",
+   "name": "어린이 놀이터",
+   "lat": 37.49107,
+   "lon": 127.04066,
+   "osm": "way/647165390"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.49452,
+   "lon": 127.06977,
+   "osm": "way/775926795"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.49107,
+   "lon": 127.02679,
+   "osm": "way/1089487386"
+  },
+  {
+   "kind": "playground",
+   "name": "어린이놀이터",
+   "lat": 37.48972,
+   "lon": 127.03959,
+   "osm": "way/647165389"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.48792,
+   "lon": 127.03935,
+   "osm": "way/647168400"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.48892,
+   "lon": 127.02843,
+   "osm": "way/1463526186"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.49305,
+   "lon": 127.06428,
+   "osm": "way/775926800"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.4794,
+   "lon": 127.05376,
+   "osm": "way/888051945"
+  },
+  {
+   "kind": "playground",
+   "name": "어린이 놀이터",
+   "lat": 37.49053,
+   "lon": 127.03861,
+   "osm": "way/679620521"
+  },
+  {
+   "kind": "playground",
+   "name": "현대아파트 놀이터",
+   "lat": 37.48909,
+   "lon": 127.03898,
+   "osm": "way/679620520"
+  },
+  {
+   "kind": "playground",
+   "name": "어린이 놀이터",
+   "lat": 37.49014,
+   "lon": 127.04113,
+   "osm": "way/647165391"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.4801,
+   "lon": 127.05324,
+   "osm": "way/888051944"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.47027,
+   "lon": 127.0446,
+   "osm": "way/1370470732"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.49186,
+   "lon": 127.03324,
+   "osm": "way/1571521519"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.47541,
+   "lon": 127.03277,
+   "osm": "node/1925498801"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.45375,
+   "lon": 127.0639,
+   "osm": "node/4636527005"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.45312,
+   "lon": 127.06376,
+   "osm": "node/4636527006"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.49094,
+   "lon": 127.05886,
+   "osm": "node/1930543957"
+  },
+  {
+   "kind": "playground",
+   "name": "Fitness Station",
+   "lat": 37.49123,
+   "lon": 127.0482,
+   "osm": "node/3737065249"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.49048,
+   "lon": 127.06046,
+   "osm": "node/1930543926"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.49229,
+   "lon": 127.05664,
+   "osm": "node/1925419716"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.47595,
+   "lon": 127.03062,
+   "osm": "node/1925498842"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.48844,
+   "lon": 127.01746,
+   "osm": "node/12218090553"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.49302,
+   "lon": 127.05515,
+   "osm": "node/1925419730"
+  },
+  {
+   "kind": "playground",
+   "name": "횃불공원",
+   "lat": 37.47826,
+   "lon": 127.03748,
+   "osm": "node/2362613273"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.47094,
+   "lon": 127.03515,
+   "osm": "node/8327511781"
+  },
+  {
+   "kind": "playground",
+   "name": "네이처힐 놀이터",
+   "lat": 37.46437,
+   "lon": 127.01889,
+   "osm": "node/4641422575"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.49299,
+   "lon": 127.05642,
+   "osm": "node/1925419729"
+  },
+  {
+   "kind": "playground",
+   "name": "",
+   "lat": 37.47333,
+   "lon": 127.03168,
+   "osm": "node/1925498571"
+  },
+  {
+   "kind": "park",
+   "name": "양재시민의숲",
+   "lat": 37.47028,
+   "lon": 127.03588,
+   "osm": "way/261996465",
+   "playground": true
+  },
+  {
+   "kind": "park",
+   "name": "달터공원",
+   "lat": 37.48471,
+   "lon": 127.06136,
+   "osm": "way/368278186",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "도곡근린공원",
+   "lat": 37.48945,
+   "lon": 127.04373,
+   "osm": "way/369972508",
+   "playground": true
+  },
+  {
+   "kind": "park",
+   "name": "",
+   "lat": 37.47068,
+   "lon": 127.0367,
+   "osm": "relation/5490459",
+   "playground": true
+  },
+  {
+   "kind": "park",
+   "name": "양재천 근린공원",
+   "lat": 37.47679,
+   "lon": 127.0416,
+   "osm": "way/647168398",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "",
+   "lat": 37.4892,
+   "lon": 127.05934,
+   "osm": "way/396812559",
+   "playground": true
+  },
+  {
+   "kind": "park",
+   "name": "서초문화예술공원",
+   "lat": 37.46823,
+   "lon": 127.03104,
+   "osm": "way/370130119",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "",
+   "lat": 37.48657,
+   "lon": 127.05398,
+   "osm": "way/396396585",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "우면산생태공원",
+   "lat": 37.46779,
+   "lon": 127.01751,
+   "osm": "way/1184398043",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "",
+   "lat": 37.47295,
+   "lon": 127.05294,
+   "osm": "way/678113194",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "양재근린공원",
+   "lat": 37.47172,
+   "lon": 127.04239,
+   "osm": "way/371210506",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "태봉산공원",
+   "lat": 37.46377,
+   "lon": 127.02271,
+   "osm": "relation/9744963",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "말죽거리근린공원",
+   "lat": 37.48012,
+   "lon": 127.03704,
+   "osm": "way/910465715",
+   "playground": true
+  },
+  {
+   "kind": "park",
+   "name": "망루근린공원",
+   "lat": 37.46247,
+   "lon": 127.02018,
+   "osm": "way/556437511",
+   "playground": true
+  },
+  {
+   "kind": "park",
+   "name": "",
+   "lat": 37.48866,
+   "lon": 127.06372,
+   "osm": "way/370329013",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "싸리고개공원",
+   "lat": 37.48953,
+   "lon": 127.03574,
+   "osm": "way/628231871",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "녹지",
+   "lat": 37.45818,
+   "lon": 127.0176,
+   "osm": "way/582384099",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "",
+   "lat": 37.4536,
+   "lon": 127.05346,
+   "osm": "way/1006322744",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "개포동 근린공원",
+   "lat": 37.48971,
+   "lon": 127.06773,
+   "osm": "way/469679012",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "",
+   "lat": 37.4682,
+   "lon": 127.0332,
+   "osm": "way/370139885",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "",
+   "lat": 37.47093,
+   "lon": 127.04983,
+   "osm": "way/678113177",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "방아다리 근린공원",
+   "lat": 37.47808,
+   "lon": 127.03521,
+   "osm": "relation/20810294",
+   "playground": true
+  },
+  {
+   "kind": "park",
+   "name": "",
+   "lat": 37.48413,
+   "lon": 127.02666,
+   "osm": "way/1047544545",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "우면공원",
+   "lat": 37.45912,
+   "lon": 127.02096,
+   "osm": "way/582384303",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "용허리근린공원",
+   "lat": 37.49425,
+   "lon": 127.02305,
+   "osm": "way/606127880",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "샛별어린이공원",
+   "lat": 37.47015,
+   "lon": 127.0446,
+   "osm": "way/291715900",
+   "playground": true
+  },
+  {
+   "kind": "park",
+   "name": "목련어린이공원",
+   "lat": 37.47431,
+   "lon": 127.05245,
+   "osm": "way/370217706",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "",
+   "lat": 37.46367,
+   "lon": 127.02406,
+   "osm": "way/701121360",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "도곡까치공원",
+   "lat": 37.48313,
+   "lon": 127.0452,
+   "osm": "way/468971649",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "목련공원",
+   "lat": 37.48496,
+   "lon": 127.04436,
+   "osm": "way/417970393",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "",
+   "lat": 37.4936,
+   "lon": 127.02178,
+   "osm": "way/469006616",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "으뜸어린이공원",
+   "lat": 37.48902,
+   "lon": 127.02835,
+   "osm": "way/1044094490",
+   "playground": true
+  },
+  {
+   "kind": "park",
+   "name": "성형촌 어린이공원",
+   "lat": 37.46641,
+   "lon": 127.01993,
+   "osm": "way/1081195007",
+   "playground": true
+  },
+  {
+   "kind": "park",
+   "name": "역삼 소나무 공원",
+   "lat": 37.49098,
+   "lon": 127.03372,
+   "osm": "way/676570599",
+   "playground": true
+  },
+  {
+   "kind": "park",
+   "name": "사도감 어린이공원",
+   "lat": 37.48577,
+   "lon": 127.03125,
+   "osm": "way/677583498",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "마산말어린이공원",
+   "lat": 37.48712,
+   "lon": 127.02671,
+   "osm": "way/701490526",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "홍씨마을 어린이공원",
+   "lat": 37.45306,
+   "lon": 127.06566,
+   "osm": "way/1187215480",
+   "playground": true
+  },
+  {
+   "kind": "park",
+   "name": "포이공원",
+   "lat": 37.47275,
+   "lon": 127.0519,
+   "osm": "way/678113175",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "서초문화예술공원 관리사무소",
+   "lat": 37.4699,
+   "lon": 127.03207,
+   "osm": "way/1394437561",
+   "playground": false
+  },
+  {
+   "kind": "park",
+   "name": "화장실",
+   "lat": 37.46977,
+   "lon": 127.0322,
+   "osm": "way/1394474137",
+   "playground": false
+  },
+  {
+   "kind": "library",
+   "name": "서초구립양재도서관",
+   "lat": 37.4737,
+   "lon": 127.03364,
+   "osm": "way/910465728",
+   "hours": "Mo-Th 09:00-22:00, Sa-Su 09:00~20:00"
+  },
+  {
+   "kind": "library",
+   "name": "서울특별시교육청 개포도서관(휴관)",
+   "lat": 37.48308,
+   "lon": 127.06396,
+   "osm": "way/370325384"
+  },
+  {
+   "kind": "library",
+   "name": "작은도서관",
+   "lat": 37.47796,
+   "lon": 127.05407,
+   "osm": "way/888051931"
+  },
+  {
+   "kind": "library",
+   "name": "서초청소년도서관",
+   "lat": 37.4923,
+   "lon": 127.02817,
+   "osm": "way/871862105"
+  },
+  {
+   "kind": "library",
+   "name": "개포4동문고",
+   "lat": 37.4788,
+   "lon": 127.05143,
+   "osm": "node/368653013"
+  },
+  {
+   "kind": "library",
+   "name": "도곡1동문고",
+   "lat": 37.49082,
+   "lon": 127.03817,
+   "osm": "node/368653104"
+  },
+  {
+   "kind": "library",
+   "name": "대치1동문고",
+   "lat": 37.49337,
+   "lon": 127.06114,
+   "osm": "node/368653028"
+  },
+  {
+   "kind": "library",
+   "name": "책만드는도서관",
+   "lat": 37.48658,
+   "lon": 127.05176,
+   "osm": "node/368655354"
+  },
+  {
+   "kind": "library",
+   "name": "도곡2동문고",
+   "lat": 37.4837,
+   "lon": 127.04645,
+   "osm": "node/368653086"
+  },
+  {
+   "kind": "library",
+   "name": "횃불도서관",
+   "lat": 37.4793,
+   "lon": 127.03391,
+   "osm": "node/368655397"
+  }
+ ]
+}
