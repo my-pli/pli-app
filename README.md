@@ -18,7 +18,7 @@
 ![Tests](https://img.shields.io/badge/tests-78_unit·33_device·27_acceptance-2EA44F?style=flat-square)
 ![Version](https://img.shields.io/badge/APK-3.2.0-informational?style=flat-square)
 
-[제품 영상](#-제품-영상) · [기획서 PDF](docs/pli-pleos-product-brief.pdf) · [사용 설명서](docs/manual/USER-GUIDE.md) · [심사 시연 가이드](docs/manual/DEMO-GUIDE.md) · [설치·실행](docs/manual/INSTALL.md) · [기술 문서](docs/manual/ARCHITECTURE.md)
+[**APK 다운로드**](apk/플리_pli_release.apk) · [제품 영상](#-제품-영상) · [기획서 PDF](docs/pli-pleos-product-brief.pdf) · [사용 설명서](docs/manual/USER-GUIDE.md) · [심사 시연 가이드](docs/manual/DEMO-GUIDE.md) · [설치·실행](docs/manual/INSTALL.md) · [기술 문서](docs/manual/ARCHITECTURE.md)
 
 **TEAM MOON**
 
@@ -216,6 +216,15 @@ flowchart TB
 
 **설치 없이 체험** — 시연 포털의 `/app`(음성 앱), `/pleos`(실제 Pleos 화면), `/resources`(영상·기획서). 순서는 [심사 시연 가이드](docs/manual/DEMO-GUIDE.md)를 따라 주세요.
 
+**APK 바로 설치** — [`apk/플리_pli_release.apk`](apk/플리_pli_release.apk) (3.2.0 · 180MB · Pleos Connect용 · 개발 키 서명)
+
+```sh
+adb install -r "apk/플리_pli_release.apk"
+# SHA-256 4a08390836cbc6b81574a7adeb5fe7b2b76bfe87317ad5b8bf940181d31257b9
+```
+
+APK는 Git LFS로 저장되어 있습니다. 저장소를 복제할 때는 `git lfs install` 후 `git clone`하거나, GitHub 웹에서 파일을 열어 **Download**를 누르세요.
+
 **직접 빌드·실행** (Linux · KVM · JDK 17 · Python 3)
 
 ```sh
@@ -249,6 +258,7 @@ deploy/install-edge-services.sh   # (선택) 차량 엣지 AI: LLM · 에이전�
 │   ├── demo-*.py, public-*.py   시연 포털 · 에뮬레이터 런타임 · 공개 터널
 │   └── film_*.py, *-film.py     제품 영상 파이프라인 (계획 · 녹화 · 검사 · 조립)
 ├── demo-v2/                     시연 웹 포털 (/app · /pleos · /resources)
+├── apk/                         배포용 APK 플리_pli_release.apk (Git LFS)
 ├── deploy/                      엣지 AI systemd 템플릿 · 설치 스크립트 · 고정 패키지 버전
 ├── qa/native/                   인수 검사 27종 · 검사 도구 · 고정 입력(합성 음성)
 ├── media/pli-film/              제품 영상 계획 (장면 · 대사 · 편집 · 앱 촬영 대본)

@@ -46,10 +46,13 @@
 
 실행 중에는 Pleos Virtual Console(`http://127.0.0.1:8088/`)에서 차량 값을 바꿔 볼 수 있습니다. `./pleos run`이 포트 전달과 콘솔 세션을 함께 준비합니다.
 
-**다른 Pleos 기기에 설치**
+**빌드 없이 설치 · 다른 Pleos 기기에 설치**
+
+저장소의 배포용 APK(Git LFS)를 그대로 설치할 수 있습니다. 직접 빌드했다면 `artifacts/pli-pleos.apk`를 씁니다.
 
 ```sh
-adb install -r artifacts/pli-pleos.apk
+git lfs install && git lfs pull          # 복제본에 APK 실제 파일 받기
+adb install -r "apk/플리_pli_release.apk" # 3.2.0 · SHA-256 4a083908…1257b9
 ```
 
 처음 실행할 때 Android의 마이크 권한 허용이 한 번 필요합니다. 앱은 엣지가 없어도 헤드유닛 안의 음성 엔진과 규칙으로 동작합니다.

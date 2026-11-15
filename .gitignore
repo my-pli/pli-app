@@ -4,9 +4,11 @@
 # 로컬 도구·모델·비공개 자료 (SDK, 에뮬레이터, 가상환경, 엣지 AI 모델, 가족 사진)
 /.tools/
 
-# 빌드 결과물 — APK·제품 영상·전달 묶음은 릴리스로 배포
+# 빌드 결과물 — 배포용 APK는 apk/ 한 곳에만 (Git LFS, .gitattributes)
 /artifacts/
 *.apk
+!/apk/
+!/apk/플리_pli_release.apk
 *.aab
 *.keystore
 *.jks
