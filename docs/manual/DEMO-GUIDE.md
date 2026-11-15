@@ -89,4 +89,4 @@
 - **화면 연결 중**이 계속되면 **다시 연결**을 누릅니다.
 - 다른 사람이 체험 중이면 관람 모드로 보입니다. 3분 뒤 차례가 돌아옵니다.
 - 소리가 안 들리면 **소리 연결 다시 켜기**를 누릅니다.
-- 포털이 열리지 않으면 저장소의 영상([가로](../media/pli-film-landscape.mp4) · [세로](../../demo-v2/preview.mp4))과 [기획서](../pli-pleos-product-brief.pdf)로 확인할 수 있습니다. 직접 실행은 [설치·실행 가이드](INSTALL.md)를 참고하세요.
+- 포털이 열리지 않으면 YouTube 영상([가로](https://youtu.be/-pdkkt0xf9g) · [숏폼](https://youtube.com/shorts/rMiUogxPUHY)), 저장소의 원본 영상([가로](../media/pli-film-landscape.mp4) · [세로](../../demo-v2/preview.mp4))과 [기획서](../pli-pleos-product-brief.pdf)로 확인할 수 있습니다. 직접 실행은 [설치·실행 가이드](INSTALL.md)를 참고하세요.

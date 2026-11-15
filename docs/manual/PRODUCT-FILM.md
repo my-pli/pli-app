@@ -5,8 +5,8 @@
 
 | 결과물 | 형식 | 길이 |
 |---|---|---|
-| [가로](../media/pli-film-landscape.mp4) | 1920×1080 · 30fps · Pleos 화면 전체 | 41.3초 |
-| [세로](../../demo-v2/preview.mp4) | 1080×1920 · 30fps · 플리 카드 클로즈업 | 41.0초 |
+| 가로 — [YouTube](https://youtu.be/-pdkkt0xf9g) · [원본](../media/pli-film-landscape.mp4) | 1920×1080 · 30fps · Pleos 화면 전체 | 41.3초 |
+| 숏폼 — [YouTube Shorts](https://youtube.com/shorts/rMiUogxPUHY) · [원본](../../demo-v2/preview.mp4) | 1080×1920 · 30fps · 플리 카드 클로즈업 | 41.0초 |
 
 ![세로 영상 장면](../images/film-vertical.jpg)
 

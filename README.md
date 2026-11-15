@@ -82,11 +82,17 @@
 ## 🎬 제품 영상
 
 <table>
-<tr><td><a href="docs/media/pli-film-landscape.mp4"><img src="docs/images/film-landscape.jpg" alt="가로 영상"></a></td></tr>
-<tr><td align="center"><b>▶ 가로 1920×1080 · 41.3초</b> — <a href="docs/media/pli-film-landscape.mp4">docs/media/pli-film-landscape.mp4</a> · Pleos 화면 전체로 보는 하원길</td></tr>
-<tr><td><a href="demo-v2/preview.mp4"><img src="docs/images/film-vertical.jpg" alt="세로 영상"></a></td></tr>
-<tr><td align="center"><b>▶ 세로 1080×1920 · 41.0초</b> — <a href="demo-v2/preview.mp4">demo-v2/preview.mp4</a> · 칭얼거림 → 준비물 → 앨범 → “응, 좋아!”</td></tr>
+<tr>
+<td align="center"><a href="https://youtu.be/-pdkkt0xf9g"><img src="docs/images/yt-landscape.jpg" width="560" alt="YouTube에서 가로 영상 재생"></a></td>
+<td align="center"><a href="https://youtube.com/shorts/rMiUogxPUHY"><img src="docs/images/yt-shorts.jpg" width="178" alt="YouTube Shorts 재생"></a></td>
+</tr>
+<tr>
+<td align="center"><b>가로 · 41.3초</b> — Pleos 화면 전체로 보는 하원길<br>▶ <a href="https://youtu.be/-pdkkt0xf9g">YouTube에서 재생</a> · <a href="docs/media/pli-film-landscape.mp4">원본 mp4</a></td>
+<td align="center"><b>숏폼 · 41.0초</b><br>▶ <a href="https://youtube.com/shorts/rMiUogxPUHY">YouTube Shorts</a> · <a href="demo-v2/preview.mp4">원본 mp4</a></td>
+</tr>
 </table>
+
+썸네일을 누르면 YouTube에서 바로 재생됩니다.
 
 - 가족 장면은 AI 영상 모델로 연출하고, **기능 장면(준비물·앨범·들를 곳)은 실제 Pleos 에뮬레이터에서 실제 APK를 녹화**했습니다.
 - 영상도 소프트웨어처럼 검사합니다. 대사 받아쓰기 일치, 장면 경계의 말 잘림, 배경 잡음 튐, 얼굴 일치, 앱 화면 끊김(초당 다시 그림 수), AI가 배경에 잘못 그린 글자·물체 검출까지 **12개 자동 검사를 통과한 결과물**입니다. → [영상 제작 파이프라인](docs/manual/PRODUCT-FILM.md)

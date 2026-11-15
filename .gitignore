@@ -55,3 +55,6 @@ node_modules/
 !/docs/pli-pleos-proposal.html
 !/docs/pli-pleos-product-brief.pdf
 !/docs/THIRD-PARTY.md
+
+# 브라우저 자동화 캡처
+/.playwright-mcp/
